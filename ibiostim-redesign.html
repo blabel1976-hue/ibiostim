@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iBioStim™ — Biological Infrastructure for Institutional Capital</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0D1F14;color:#C8D8C8;font-family:'Montserrat',sans-serif;font-weight:300;font-size:15px;line-height:1.75;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.4}
+section{position:relative;z-index:1}
+.si{max-width:1280px;margin:0 auto;padding:0 60px}
+.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#C4A84A;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.sl::after{content:'';display:block;flex:1;height:1px;background:linear-gradient(to right,rgba(74,160,100,0.3),transparent)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,56px);font-weight:300;line-height:1.08;color:#E8F0E8}
+h2 em{font-style:italic;color:#52B87A}
+h3{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2vw,26px);font-weight:300;color:#E8F0E8;line-height:1.2}
+p{font-weight:300;line-height:1.88;color:#C8D8C8}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fu.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.btn-gold{display:inline-flex;align-items:center;gap:10px;background:#2D6B40;color:#E8F0E8;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:14px 40px;text-decoration:none;transition:all .25s}
+.btn-gold:hover{background:#246038}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(74,160,100,0.25);color:#C8D8C8;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:14px 30px;text-decoration:none;transition:all .25s}
+.btn-outline:hover{border-color:#52B87A;color:#52B87A}
+@media(max-width:1024px){.si{padding:0 24px}}
+
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(13,31,20,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,160,100,0.15);transition:border-color .4s}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.nav-logo span{color:#52B87A}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#7A9A80;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#52B87A}
+.nav-series{font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:8px 18px;border:1px solid rgba(74,160,100,0.2);white-space:nowrap}
+.nav-plat{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#52B87A;padding:8px 16px;border:1px solid rgba(74,160,100,0.25);text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-plat:hover{background:#2A6B40;color:#E8F0E8}
+.nav-plat-dot{width:5px;height:5px;background:#52B87A;border-radius:50%;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
+.nav-cta{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#52B87A;border:1px solid rgba(74,160,100,0.25);padding:10px 20px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-cta:hover{background:#2A6B40;color:#E8F0E8}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+
+.mq{overflow:hidden;white-space:nowrap;position:relative;z-index:10;padding:12px 0}
+.mq-inner{display:inline-flex;animation:marquee 40s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq-inner span{font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:0 44px}
+.mq-inner .sep{padding:0;font-size:8px}
+
+
+footer{background:#0A1A10;border-top:1px solid rgba(74,160,100,0.12);padding:52px 60px 32px}
+.ftr{max-width:1280px;margin:0 auto}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(74,160,100,0.1)}
+.ftr-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.ftr-logo span{color:#52B87A}
+.ftr-brand p{font-size:11px;color:#7A9A80;margin-top:13px;line-height:1.8}
+.ftr-mas{margin-top:12px;display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:9px;color:#52B87A;letter-spacing:.12em}
+.ftr-dot{width:5px;height:5px;background:#52B87A;border-radius:50%;animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+.ftr-col h5{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:14px}
+.ftr-col a{display:block;font-size:11.5px;color:#7A9A80;text-decoration:none;margin-bottom:8px;transition:color .2s}
+.ftr-col a:hover{color:#52B87A}
+.ftr-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-copy{font-size:10px;color:#6A8A70}
+.ftr-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#52B87A}
+@media(max-width:1024px){nav{padding:16px 24px}.nav-links,.nav-series{display:none}footer{padding:36px 24px 24px}.ftr-grid{grid-template-columns:1fr 1fr;gap:24px}.ftr-bottom{justify-content:center;text-align:center}}
+
+
+:root{--gold:#C4A84A;--gold-light:#52B87A;--gold-pale:#74C69D;--silver:#7A9A80;--platinum:#E8F0E8;--border:rgba(74,160,100,0.18);--border-s:rgba(74,160,100,0.08);--border-pl:rgba(74,160,100,0.10);--border-pls:rgba(74,160,100,0.05)}
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 120px;position:relative;overflow:hidden}
+.h-vl{position:absolute;top:0;bottom:0;width:1px;background:var(--border-pls)}.h-vl.v1{left:33.33%}.h-vl.v2{left:66.66%}
+.h-glow{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(20,80,40,0.08) 0%,transparent 70%);pointer-events:none}
+.h-eye{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C4A84A;margin-bottom:28px;display:flex;align-items:center;gap:16px}
+.h-eye::before{content:'';width:36px;height:1px;background:#C4A84A;display:block}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(50px,7vw,104px);font-weight:300;line-height:.96;color:#E8F0E8;max-width:920px}
+h1 em{font-style:italic;color:#52B87A}
+h1 strong{font-weight:300;color:#A0C8A8}
+.h-deck{font-size:14px;color:#A0C0A8;max-width:560px;margin:28px 0 44px;line-height:1.9}
+.h-deck strong{color:#E8F0E8;font-weight:400}
+.h-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.h-stats{display:flex;gap:44px;margin-top:52px;padding-top:44px;border-top:1px solid var(--border-pls);flex-wrap:wrap}
+.hs-val{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#E8F0E8;line-height:1}
+.hs-val sup{font-size:14px;color:#C4A84A}
+.hs-label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7A9A80;margin-top:5px}
+/* JEWEL */
+#jewel{padding:120px 0;border-bottom:1px solid var(--border-pls);position:relative;overflow:hidden}
+.jbg1{position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,14,8,0) 0%,rgba(8,22,12,0.5) 100%);pointer-events:none}
+.jbg2{position:absolute;inset:0;background-image:linear-gradient(rgba(74,160,100,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(74,160,100,0.03) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
+.j-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.j-badge{display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#C4A84A;border:1px solid var(--border);padding:8px 16px;margin-bottom:28px}
+.j-badge::before{content:'■';font-size:7px}
+.j-num{font-family:'Cormorant Garamond',serif;font-size:clamp(72px,11vw,148px);font-weight:300;color:#E8F0E8;line-height:.9;letter-spacing:-.02em;margin:14px 0 8px}
+.j-num sup{font-size:.26em;color:#C4A84A;vertical-align:super}
+.j-num-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7A9A80;margin-bottom:28px}
+.j-desc{font-size:14px;color:#A0C0A8;line-height:1.9;max-width:500px;margin-bottom:32px}
+.j-desc strong{color:#E8F0E8;font-weight:400}
+.j-badges{display:flex;gap:14px;margin-bottom:32px;flex-wrap:wrap}
+.jb{display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:#7A9A80;padding:6px 12px;border:1px solid var(--border-pls)}
+.jb-dot{width:5px;height:5px;border-radius:50%;background:#52B87A;flex-shrink:0}
+.j-right{display:flex;flex-direction:column;gap:2px}
+.jp{background:#0E1E14;padding:26px 30px;border-left:3px solid transparent;transition:all .3s;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.jp:hover{border-left-color:#52B87A;background:#122A1A}
+.jp-icon{font-size:20px;padding-top:2px}
+.jp h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:#E8F0E8;margin-bottom:5px}
+.jp p{font-size:12.5px;color:#A0C0A8;line-height:1.75}
+.jp-tag{margin-top:7px;font-family:'DM Mono',monospace;font-size:10px;color:#52B87A;letter-spacing:.1em}
+/* MANDATE */
+#mandate{padding:120px 0;border-bottom:1px solid var(--border-s)}
+.m-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.ms{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.5vw,34px);font-weight:300;line-height:1.5;color:#E8F0E8}
+.ms strong{color:#52B87A;font-weight:300}
+.md{width:44px;height:1px;background:#52B87A;margin:28px 0}
+/* CONVERGENCES */
+#conv{padding:80px 0;background:#0E1E14;border-bottom:1px solid var(--border-pls)}
+.ct-belt{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-pls)}
+.ct{background:#0E1E14;padding:44px 38px;position:relative;overflow:hidden;transition:background .3s;text-decoration:none;display:block}
+.ct:hover{background:#122A1A}
+.ct::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.ct.food::after{background:linear-gradient(to right,#2A6A3A,#4AB854)}
+.ct.energy::after{background:linear-gradient(to right,#3A2A7A,#6A50C8)}
+.ct.data::after{background:linear-gradient(to right,#1A3A8A,#2A6AC8)}
+.ct:hover::after{transform:scaleX(1)}
+.ct-num{font-family:'DM Mono',monospace;font-size:9px;color:#C4A84A;letter-spacing:.2em;margin-bottom:18px;display:block}
+.ct-icon{font-size:30px;margin-bottom:14px;display:block}
+.ct h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#E8F0E8;margin-bottom:5px}
+.ct-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:block}
+.ct.food .ct-sub{color:#4AB854}.ct.energy .ct-sub{color:#8A70D8}.ct.data .ct-sub{color:#4A8AC8}
+.ct p{font-size:12.5px;color:#A0C0A8;line-height:1.8}
+.ct-stat{margin-top:24px;font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#E8F0E8;line-height:1}
+.ct-stat sup{font-size:15px;color:#C4A84A}
+.ct-stat-label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7A9A80;margin-top:5px}
+.conv-cta{text-align:center;padding-top:36px}
+.conv-cta a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:gap .2s}
+.conv-cta a:hover{gap:16px}
+/* ASSETS */
+#assets{padding:120px 0;border-bottom:1px solid var(--border-s)}
+.a-header{display:grid;grid-template-columns:1fr 1fr;gap:96px;margin-bottom:60px;align-items:end}
+.a-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s)}
+.ac{background:#0E1E14;position:relative;overflow:hidden;transition:background .3s;text-decoration:none;display:flex;flex-direction:column}
+.ac:hover{background:#122A1A}
+.ac-top{padding:38px 34px 28px;flex:1}
+.ac-num{font-family:'DM Mono',monospace;font-size:9px;color:#C4A84A;letter-spacing:.2em;margin-bottom:14px;display:block}
+.ac-icon{font-size:34px;margin-bottom:16px;display:block}
+.ac h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:300;color:#E8F0E8;margin-bottom:7px}
+.ac-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#7A9A80;margin-bottom:13px;display:block}
+.ac p{font-size:12.5px;color:#A0C0A8;line-height:1.8}
+.ac-bottom{padding:18px 34px 26px;border-top:1px solid rgba(74,160,100,0.1);display:flex;justify-content:space-between;align-items:center}
+.ac-metric{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#52B87A;line-height:1}
+.ac-metric sup{font-size:11px;color:#C4A84A}
+.ac-metric-label{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#7A9A80;margin-top:4px}
+.ac-arrow{font-size:18px;color:#52B87A;transition:transform .25s}
+.ac:hover .ac-arrow{transform:translateX(5px)}
+/* MULTIPLIER */
+#multiplier{padding:120px 0;background:#0E1E14;border-bottom:1px solid var(--border-s)}
+.mu-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.chain{display:flex;flex-direction:column}
+.cn{display:flex;align-items:flex-start;gap:20px;padding:20px 0;border-bottom:1px solid var(--border-s);position:relative}
+.cn:last-child{border-bottom:none}
+.cn::before{content:'';position:absolute;left:18px;top:0;width:1px;height:20px;background:linear-gradient(to bottom,#52B87A,transparent)}
+.cn:first-child::before{display:none}
+.cn-dot{width:36px;height:36px;flex-shrink:0;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;color:#52B87A;transition:all .3s}
+.cn:hover .cn-dot{background:#2A6B40;color:#E8F0E8;border-color:#4AA864}
+.cn h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:#E8F0E8;margin-bottom:5px}
+.cn p{font-size:12.5px;color:#A0C0A8;line-height:1.75}
+.pt{border:1px solid var(--border);overflow:hidden;margin-top:36px}
+.pt-row{display:grid;grid-template-columns:1.5fr 1fr 1fr;border-bottom:1px solid var(--border-s)}
+.pt-row:last-child{border-bottom:none}
+.pt-row.hdr{background:#122A1A;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#52B87A}
+.pt-c{padding:12px 16px;font-size:12.5px;border-right:1px solid var(--border-s)}
+.pt-c:last-child{border-right:none}
+.pt-c.pos{color:#FFFFFF;font-family:'DM Mono',monospace;font-size:12px}
+.pt-c.neu{color:#6E8E76;font-family:'DM Mono',monospace;font-size:12px}
+/* METRICS */
+#metrics{padding:70px 0;border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s)}
+.mb{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border-s)}
+.mc{background:#0D1F14;padding:42px 28px;text-align:center}
+.mv{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:300;color:#52B87A;line-height:1}
+.mv sup{font-size:18px;color:#C4A84A}
+.ml{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7A9A80;margin-top:9px}
+/* SERVE */
+#serve{padding:120px 0;border-bottom:1px solid var(--border-s)}
+.sv-header{display:grid;grid-template-columns:1fr 1fr;gap:96px;margin-bottom:60px;align-items:end}
+.sv-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s)}
+.sc{background:#0E1E14;padding:38px 30px;transition:background .3s}
+.sc:hover{background:#122A1A}
+.sc-icon{font-size:24px;margin-bottom:16px;display:block}
+.sc h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:#E8F0E8;margin-bottom:9px}
+.sc p{font-size:12.5px;color:#7A9A80;line-height:1.8}
+.sc-met{margin-top:16px;font-family:'DM Mono',monospace;font-size:10px;color:#52B87A}
+/* CTA */
+#cta{padding:140px 0;text-align:center;position:relative;overflow:hidden}
+#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(74,160,100,0.07) 0%,transparent 70%);pointer-events:none}
+.cta-in{position:relative;z-index:1}
+.cta-ey{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C4A84A;display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px}
+.cta-ey::before,.cta-ey::after{content:'';width:36px;height:1px;background:#C4A84A}
+#cta h2{text-align:center;margin:0 auto 20px;max-width:760px}
+#cta>div>p{max-width:520px;margin:0 auto 44px;font-size:14px;text-align:center}
+.cta-btns{display:flex;gap:14px;justify-content:center;align-items:center}
+@media(max-width:1024px){.j-grid,.m-grid,.a-header,.mu-grid,.sv-header{grid-template-columns:1fr;gap:40px}.ct-belt{grid-template-columns:1fr}.a-grid{grid-template-columns:1fr 1fr}.sv-cards{grid-template-columns:1fr 1fr}.mb{grid-template-columns:repeat(3,1fr)}.h-stats{flex-wrap:wrap;gap:24px}}
+
+</style>
+</head>
+<body>
+<nav id="mn">
+<a href="#" class="nav-logo">iBioStim<span>™</span></a>
+<div class="nav-links">
+<a href="#mandate">The Mandate</a>
+<a href="#assets">Asset Series</a>
+<a href="#multiplier">ABS Multiplier</a>
+<a href="#serve">Who We Serve</a>
+</div>
+<a href="platform.html" class="nav-plat"><span class="nav-plat-dot"></span>$1.4T Platform</a>
+</nav>
+
+<section id="hero">
+<div class="h-vl v1"></div><div class="h-vl v2"></div>
+<div class="h-glow"></div>
+<div class="h-eye">Off-Market · Singapore · Institutional Access to MAS-Registered Fund Platforms</div>
+<h1>Biological<br><em>Infrastructure</em><br>for <strong>Institutional Capital</strong></h1>
+<p class="h-deck">iBioStim™ is not a product vendor. We are the biological intelligence layer that converts agricultural land into <strong>institutional-grade, asset-backed returns</strong> — cascaded across the entire value chain and anchored to a $1.4T MAS-registered safe haven fund platform in Singapore.</p>
+<div class="h-actions">
+<a href="platform.html" class="btn-gold">Explore the $1.4T Platform →</a>
+<a href="#mandate" class="btn-outline">Understand the Mandate ↓</a>
+</div>
+<div class="h-stats">
+<div><div class="hs-val">$1.4<sup>T</sup></div><div class="hs-label">ABS Platform Valuation</div></div>
+<div><div class="hs-val">2.34<sup>×</sup></div><div class="hs-label">Oil Palm Industry Multiplier</div></div>
+<div><div class="hs-val">500<sup>K+</sup></div><div class="hs-label">Hectares Committed</div></div>
+<div><div class="hs-val">100<sup>%</sup></div><div class="hs-label">Protocol Success Rate</div></div>
+</div>
+</section>
+
+<div class="mq" style="background:rgba(12,14,20,0.95);border-top:1px solid rgba(74,160,100,0.05);border-bottom:1px solid rgba(74,160,100,0.05)">
+<div class="mq-inner">
+<span style="color:#7A9A80">$1.4T Asset-Backed Platform</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">MAS-Registered · Singapore</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">Oil Palm · Food · Bioenergy · Data Centres</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">2.34× Industry Standard</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">Off-Market · Institutional Only</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">Six Flagship Cash Crops</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">100% Protocol Success Rate</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">First Principles ABS Valuation</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">$1.4T Asset-Backed Platform</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">MAS-Registered · Singapore</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">Oil Palm · Food · Bioenergy · Data Centres</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">2.34× Industry Standard</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">Off-Market · Institutional Only</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">Six Flagship Cash Crops</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">100% Protocol Success Rate</span><span class="sep" style="color:#C4A84A">·</span><span style="color:#7A9A80">First Principles ABS Valuation</span><span class="sep" style="color:#C4A84A">·</span>
+</div>
+</div>
+
+<section id="jewel">
+<div class="jbg1"></div><div class="jbg2"></div>
+<div class="si">
+<div class="j-grid">
+<div class="fu">
+<div class="j-badge">MAS-Registered · Singapore · Crown Jewel</div>
+<div class="sl">01 — The Platform</div>
+<h2>The Safe Haven Fund<br>That <em>Moves the<br>Economic Needle</em></h2>
+<div class="j-num">$1.4<sup>T</sup></div>
+<div class="j-num-label">100% Asset-Backed · Oil Palm · Food · Bioenergy · Data Centres</div>
+<p class="j-desc">iBioStim™ offers institutional-grade investors access to a <strong>MAS-registered safe haven fund in Singapore</strong> — the world's first off-market vehicle structured to capture the full ABS value of oil palm across three converging economic megatrends. Exclusively.</p>
+<div class="j-badges">
+<div class="jb"><div class="jb-dot"></div>100% Asset-Backed</div>
+<div class="jb"><div class="jb-dot"></div>First Principles</div>
+<div class="jb"><div class="jb-dot"></div>MAS Regulated</div>
+<div class="jb"><div class="jb-dot"></div>Off-Market Only</div>
+</div>
+<a href="platform.html" class="btn-gold">Access the Platform →</a>
+</div>
+<div class="j-right fu d2">
+<div class="jp"><span class="jp-icon">🌾</span><div><h4>Food Security Infrastructure</h4><p>Indonesia and Malaysia supply 85–90% of global palm oil — a third of all traded vegetable oil. iBioStim™'s 宝盛 protocol delivers 2.34× the industry standard, converting volatile commodity exposure into a predictable institutional cash flow engine.</p><div class="jp-tag">→ ≥46 MT FFB/ha/year · OER up to 30%</div></div></div>
+<div class="jp"><span class="jp-icon">⚡</span><div><h4>Sovereign Bioenergy Asset</h4><p>The most energy-dense biological feedstock on the planet. As sovereign energy mandates accelerate globally, Platform land simultaneously carries food production value and strategic national energy asset designation.</p><div class="jp-tag">→ 7.3 tonnes oil/ha · Highest of any crop</div></div></div>
+<div class="jp"><span class="jp-icon">🖥️</span><div><h4>Data Centre Infrastructure Vision</h4><p>The global AI build-out requires power and cooling at scale. Palm biomass and biogas — co-located with emerging Southeast Asian data centre hubs — position Platform land as physical infrastructure for the AI economy.</p><div class="jp-tag">→ $1T+ global data centre investment 2024–2030</div></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="mandate">
+<div class="si">
+<div class="m-grid">
+<div>
+<div class="sl fu">02 — The Mandate</div>
+<div class="ms fu d1">The world's most capable institutional investors hold land. <strong>Very few know how to make it perform.</strong> We exist to close that gap — permanently, measurably, and at scale.</div>
+<div class="md fu d2"></div>
+<p class="fu d2" style="font-size:14px">Agricultural land is the largest undermanaged asset class held by pension funds, sovereign wealth funds, and generational family offices globally. The challenge has never been the land — it has been the absence of a biological intelligence framework capable of converting potential into guaranteed, compounding returns.</p>
+</div>
+<div class="fu d2">
+<p style="font-size:14px;margin-bottom:16px">iBioStim™ was built for this exact gap. Our proprietary bio-enzymatic protocols deliver what conventional agronomy cannot: <strong style="color:#C8D8C8">predictable, institutional-grade productivity</strong> that compounds across the entire value chain from soil to shelf.</p>
+<p style="font-size:14px;margin-bottom:16px">We do not sell products. We partner selectively with title holders, pension funds, SWFs, and generational family offices who recognise that biological capital, applied correctly, is the most defensible profit multiplier in a volatile global economy.</p>
+<p style="font-size:14px">Without our expertise, consistent and secured profitability from agricultural land cannot be achieved. We are a rare capability — and only the best institutions in the world will be offered access to it.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="conv">
+<div class="si">
+<div class="sl fu">03 — The Three Convergences</div>
+<div class="ct-belt fu d1">
+<a href="platform.html#convergences" class="ct food">
+<span class="ct-num">Convergence 01</span><span class="ct-icon">🌾</span>
+<h3>Food Security</h3><span class="ct-sub">Global Vegetable Oil Infrastructure</span>
+<p>85–90% of global palm oil from two countries. A third of all traded vegetable oil. No viable substitute at scale. Food system infrastructure — at 2.34× the productivity standard.</p>
+<div class="ct-stat">85<sup>%</sup></div><div class="ct-stat-label">Global supply concentration</div>
+</a>
+<a href="platform.html#convergences" class="ct energy">
+<span class="ct-num">Convergence 02</span><span class="ct-icon">⚡</span>
+<h3>Bioenergy</h3><span class="ct-sub">Sovereign Energy Independence</span>
+<p>The most energy-dense biological feedstock on earth. Sovereign mandates compressing timelines globally. Platform land is food production and strategic energy infrastructure simultaneously.</p>
+<div class="ct-stat">7.3<sup>T/ha</sup></div><div class="ct-stat-label">Highest oil yield of any crop</div>
+</a>
+<a href="platform.html#convergences" class="ct data">
+<span class="ct-num">Convergence 03</span><span class="ct-icon">🖥️</span>
+<h3>Data Centres</h3><span class="ct-sub">The AI Infrastructure Vision</span>
+<p>AI demands power and cooling at scale. Tropical land co-located with palm bioenergy is the emerging preferred geography for data centre deployment. The economic needle mover.</p>
+<div class="ct-stat">$1T<sup>+</sup></div><div class="ct-stat-label">Global data centre investment 2024–2030</div>
+</a>
+</div>
+<div class="conv-cta fu d2"><a href="platform.html">Full $1.4T Platform Thesis →</a></div>
+</div>
+</section>
+
+<section id="assets">
+<div class="si">
+<div class="a-header">
+<div><div class="sl fu">04 — The Asset Series</div><h2 class="fu d1">Eight Flagship<br><em>Cash Crops</em></h2></div>
+<div class="fu d2"><p style="font-size:14px">Each page is a complete institutional investment thesis — verified field data, first-principles economics, value chain ring-fencing, and the capital model that makes each crop a defensible, compounding position for the right investor.</p></div>
+</div>
+<div class="a-grid">
+<a href="oilpalm.html" class="ac fu"><div class="ac-top" style="border-top:2px solid #2A8A40"><span class="ac-num">Asset Series 01</span><span class="ac-icon">🌴</span><h3>Oil Palm</h3><span class="ac-sub">The Institutional Commodity Reset</span><p>The boom-bust cycle eliminated. ≥46 MT FFB/ha/year. OER up to 30%. P10/P50/P90 modelled. 500K+ committed hectares. The biological foundation of the $1.4T platform.</p></div><div class="ac-bottom"><div><div class="ac-metric">2.34<sup>×</sup></div><div class="ac-metric-label">Industry Multiplier</div></div><span class="ac-arrow">→</span></div></a>
+<a href="chilli.html" class="ac fu d1"><div class="ac-top" style="border-top:2px solid #C44020"><span class="ac-num">Asset Series 02</span><span class="ac-icon">🌶️</span><h3>Chilli</h3><span class="ac-sub">Monthly Cash Flow Architecture</span><p>Cold-snap protected to –3°C. 2–3kg/plant/month biomass. Service life doubled. USD $505K additional income per 10ha. Monthly cash flow — rare in agricultural investment.</p></div><div class="ac-bottom"><div><div class="ac-metric">$505<sup>K</sup></div><div class="ac-metric-label">Add'l Income / 10ha</div></div><span class="ac-arrow">→</span></div></a>
+<a href="sugarcane.html" class="ac fu d2"><div class="ac-top" style="border-top:2px solid #52B87A"><span class="ac-num">Asset Series 03</span><span class="ac-icon">🎋</span><h3>Sugarcane</h3><span class="ac-sub">The Unsaid Golden Multiplier</span><p>C4 photosynthesis optimised. +4g/100g sucrose uplift cascades from mill CCS to refinery premium to bioethanol yield. Drought-secured harvest. Full value chain ring-fencing.</p></div><div class="ac-bottom"><div><div class="ac-metric">+4<sup>g</sup></div><div class="ac-metric-label">Sugar / 100g Uplift</div></div><span class="ac-arrow">→</span></div></a>
+<a href="rice.html" class="ac fu"><div class="ac-top" style="border-top:2px solid #1A9A70"><span class="ac-num">Asset Series 04</span><span class="ac-icon">🌾</span><h3>Rice</h3><span class="ac-sub">Food Sovereign · 1M ha Scale</span><p>49/50 growers — 100% on-time harvest. Input cost collapsed to double-digits. 10K to 1 million hectare deployment. Sovereign mandate grade.</p></div><div class="ac-bottom"><div><div class="ac-metric">100<sup>%</sup></div><div class="ac-metric-label">Harvest Success Rate</div></div><span class="ac-arrow">→</span></div></a>
+<a href="freshproduce.html" class="ac fu d1"><div class="ac-top" style="border-top:2px solid #0A8A60"><span class="ac-num">Asset Series 05</span><span class="ac-icon">🥬</span><h3>Fresh Produce</h3><span class="ac-sub">The X-Factor No One Else Has</span><p>123% flavonoid uplift (Germany, blinded). 40-day shelf life. 8.5% Brix vs 3.2% organic. 1.3× nutrient density. 100% post-production loss elimination.</p></div><div class="ac-bottom"><div><div class="ac-metric">123<sup>%</sup></div><div class="ac-metric-label">Flavonoid Elevation</div></div><span class="ac-arrow">→</span></div></a>
+<a href="coffee.html" class="ac fu d2"><div class="ac-top" style="border-top:2px solid #8C5A28"><span class="ac-num">Asset Series 06</span><span class="ac-icon">☕</span><h3>Coffee</h3><span class="ac-sub">Attack of the Giant Berries</span><p>1.76× berry size. 60–76% biomass surge. 4–5% higher Brix unlocks $8–30/kg specialty tier. Leaf rust risk cut 30–40%. 10-year cash flow model.</p></div><div class="ac-bottom"><div><div class="ac-metric">1.76<sup>×</sup></div><div class="ac-metric-label">Berry Size Verified</div></div><span class="ac-arrow">→</span></div></a>
+<a href="banana.html" class="ac fu"><div class="ac-top" style="border-top:2px solid #C8A818"><span class="ac-num">Asset Series 07</span><span class="ac-icon">🍌</span><h3>Banana</h3><span class="ac-sub">Giant, Non-GMO, Fusarium Free</span><p>18kg → 25–30kg per plant. Fusarium TR4 eliminated at 50% SOC. 10 days early harvest. $7,560 → $12,600/acre. 300% ESL shelf life extension.</p></div><div class="ac-bottom"><div><div class="ac-metric">+67<sup>%</sup></div><div class="ac-metric-label">Yield Uplift</div></div><span class="ac-arrow">→</span></div></a>
+<a href="sweetpotato.html" class="ac fu d1"><div class="ac-top" style="border-top:2px solid #A0521A"><span class="ac-num">Asset Series 08</span><span class="ac-icon">🍠</span><h3>Sweet Potato</h3><span class="ac-sub">SlimTuber™ · Zero Waste Circular</span><p>1.5× soluble fibre (trademarked). 3× sweeter. 2.5× yield. Three revenue streams: fresh, snacks, starch. EU certified. Zero-waste circular ecosystem.</p></div><div class="ac-bottom"><div><div class="ac-metric">1.5<sup>×</sup></div><div class="ac-metric-label">Soluble Fibre™</div></div><span class="ac-arrow">→</span></div></a>
+</div>
+</div>
+</section>
+
+<section id="multiplier">
+<div class="si">
+<div class="mu-grid">
+<div>
+<div class="sl fu">05 — ABS Multiplier Framework</div>
+<h2 class="fu d1">Five Compounding<br><em>Value Layers</em></h2>
+<p style="margin-top:20px;font-size:14px;" class="fu d2">Every iBioStim™ partnership creates an auditable five-layer value architecture — each layer independently verifiable, each compounding the one beneath it, all mapping to Revenue, EBITDA, and Net Profit.</p>
+<div class="chain fu d3">
+<div class="cn"><div class="cn-dot">01</div><div><h4>Land Asset</h4><p>Title or fund ownership — the base capital position. The irreplaceable physical foundation.</p></div></div>
+<div class="cn"><div class="cn-dot">02</div><div><h4>Biological Activation</h4><p>iBioStim™ protocol applied. Cellular regeneration triggers Brix uplift, nutrient mobility, accelerated phenology — 4 months to first results.</p></div></div>
+<div class="cn"><div class="cn-dot">03</div><div><h4>Production Multiplier</h4><p>≥46 MT FFB/ha oil palm; 100% harvest security rice; +4g/100g sugar C3/C4; 1.76× berry coffee; 1.5× soluble fibre sweet potato.</p></div></div>
+<div class="cn"><div class="cn-dot">04</div><div><h4>Product Premium</h4><p>Superior profiles unlock specialty tiers. ESG compliance. Differentiated off-take pricing. Market ring-fencing — no conventional producer matches this spec.</p></div></div>
+<div class="cn"><div class="cn-dot">05</div><div><h4>ABS Return</h4><p>ML-calibrated 12-month forecast. P10/P50/P90 modelled. IPO-grade projections. Maps to Revenue, EBITDA, Net Profit. The $1.4T platform thesis.</p></div></div>
+</div>
+</div>
+<div class="fu d2">
+<div class="pt">
+<div class="pt-row hdr"><div class="pt-c">Metric</div><div class="pt-c">Industry</div><div class="pt-c">iBioStim™</div></div>
+<div class="pt-row"><div class="pt-c">Oil Palm FFB/ha/yr</div><div class="pt-c neu">15–25 MT</div><div class="pt-c pos">≥46 MT</div></div>
+<div class="pt-row"><div class="pt-c">Oil Extraction Rate</div><div class="pt-c neu">18–23%</div><div class="pt-c pos">Up to 30%</div></div>
+<div class="pt-row"><div class="pt-c">Flavonoid Elevation</div><div class="pt-c neu">Baseline</div><div class="pt-c pos">+123%</div></div>
+<div class="pt-row"><div class="pt-c">Produce Shelf Life</div><div class="pt-c neu">7 days</div><div class="pt-c pos">Up to 40 days</div></div>
+<div class="pt-row"><div class="pt-c">Coffee Berry Size</div><div class="pt-c neu">1.0×</div><div class="pt-c pos">1.76× verified</div></div>
+<div class="pt-row"><div class="pt-c">Rice Harvest Rate</div><div class="pt-c neu">Weather-dependent</div><div class="pt-c pos">100% secured</div></div>
+<div class="pt-row"><div class="pt-c">Sweet Potato Fibre</div><div class="pt-c neu">2.8 g/100g</div><div class="pt-c pos">4.2 g/100g (1.5×)</div></div>
+<div class="pt-row"><div class="pt-c">Soil Regeneration</div><div class="pt-c neu">10–15 years</div><div class="pt-c pos">14 months</div></div>
+</div>
+<div style="border:1px solid rgba(74,160,100,0.18);padding:30px;margin-top:2px;background:#122A1A">
+<div class="sl" style="margin-bottom:12px">Why These Numbers Cannot Be Replicated</div>
+<p style="font-size:13px;line-height:1.85">Every metric is the output of trade-secret bio-catalysis operating at the cellular level — where conventional inputs cannot reach. The 100% protocol success rate has held across three continents, eight crop categories, and six years of commercial deployment.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="metrics">
+<div class="si">
+<div class="mb">
+<div class="mc fu"><div class="mv">$1.4<sup>T</sup></div><div class="ml">Platform ABS Valuation</div></div>
+<div class="mc fu d1"><div class="mv">500<sup>K+</sup></div><div class="ml">Hectares Committed</div></div>
+<div class="mc fu d2"><div class="mv">123<sup>%</sup></div><div class="ml">Flavonoid Uplift Verified</div></div>
+<div class="mc fu d3"><div class="mv">100<sup>%</sup></div><div class="ml">Protocol Success Rate</div></div>
+<div class="mc fu d4"><div class="mv">8</div><div class="ml">Flagship Asset Classes</div></div>
+</div>
+</div>
+</section>
+
+<section id="serve">
+<div class="si">
+<div class="sv-header">
+<div><div class="sl fu">06 — Who We Serve</div><h2 class="fu d1">Built for the<br><em>Best in Class</em></h2></div>
+<div class="fu d2"><p style="font-size:14px">We work exclusively with a select category of capital holder. Our partnerships are not open to commodity traders, input distributors, or speculative parties. We serve those whose mandates demand consistent, secured, and defensible agricultural returns.</p></div>
+</div>
+<div class="sv-cards">
+<div class="sc fu"><span class="sc-icon">🏛️</span><h4>Title Holders &amp; Land Banks</h4><p>Large-scale landowners investing in upvaluation. iBioStim™ converts raw land productivity into a compounding, branded, defensible asset with ABS-grade financial architecture.</p><div class="sc-met">→ Oil Palm · Sugarcane · Coffee</div></div>
+<div class="sc fu d1"><span class="sc-icon">📊</span><h4>Pension Funds</h4><p>Funds requiring long-duration, outflow-matched, auditable returns. ML-forecasted cash flows and P10/P50/P90 models deliver the certainty pension mandates demand.</p><div class="sc-met">→ Oil Palm Platform · Rice</div></div>
+<div class="sc fu d2"><span class="sc-icon">🌐</span><h4>Sovereign Wealth Funds</h4><p>SWFs deploying capital into food security and strategic land. Scalable protocols (10K–1M ha) and harvest security align with national food sovereign mandates.</p><div class="sc-met">→ $1.4T Platform · Rice · Oil Palm</div></div>
+<div class="sc fu d3"><span class="sc-icon">🏡</span><h4>Generational Family Offices</h4><p>Multi-generation FOs managing tropical estates. 14-month soil regeneration ensures intergenerational asset resilience while delivering superior returns.</p><div class="sc-met">→ Coffee · Chilli · Fresh Produce</div></div>
+</div>
+</div>
+</section>
+
+<section id="cta">
+<div class="si">
+<div class="cta-in">
+<div class="cta-ey">Off-Market · Singapore · By Introduction Only</div>
+<h2>Your Land Is Ready to<br><em>Perform at Institutional Grade.</em></h2>
+<p>We accept a strictly limited number of new partnerships each year. If your mandate aligns — and your organisation has the scale and horizon this capability demands — we invite a private strategic briefing, strictly confidential and by qualified introduction only.</p>
+<div class="cta-btns">
+<a href="platform.html" class="btn-gold">Explore the $1.4T Platform →</a>
+<a href="oilpalm.html" class="btn-outline">Review Asset Series</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="ftr">
+<div class="ftr-grid">
+<div class="ftr-brand">
+<a href="#" class="ftr-logo">iBioStim<span>™</span></a>
+<p>The biological intelligence layer that converts agricultural land into institutional-grade, asset-backed returns. A Product of Singapore.</p>
+<div class="ftr-mas"><div class="ftr-dot"></div>J2Co Pte. Ltd. · 202021073D · Institutional access to MAS-registered fund platforms via the 宝盛 Protocol</div>
+<p style="margin-top:9px;font-size:10px;color:#6A7080">8 Burn Road 15-13 Trivex, Singapore 369977</p>
+</div>
+<div class="ftr-col">
+<h5>The Platform</h5>
+<a href="platform.html">$1.4T Safe Haven Fund</a>
+<a href="platform.html#thesis">ABS Thesis</a>
+<a href="platform.html#convergences">Three Convergences</a>
+<a href="platform.html#safehaven">Singapore MAS</a>
+<a href="platform.html#exclusive">Exclusive Access</a>
+</div>
+<div class="ftr-col">
+<h5>Asset Series</h5>
+<a href="oilpalm.html">Oil Palm · Asset 01</a>
+<a href="chilli.html">Chilli · Asset 02</a>
+<a href="sugarcane.html">Sugarcane · Asset 03</a>
+<a href="rice.html">Rice · Asset 04</a>
+<a href="freshproduce.html">Fresh Produce · Asset 05</a>
+<a href="coffee.html">Coffee · Asset 06</a>
+<a href="banana.html">Banana · Asset 07</a>
+<a href="sweetpotato.html">Sweet Potato · Asset 08</a>
+</div>
+<div class="ftr-col">
+<h5>Institutional</h5>
+<a href="#">Publications &amp; Data</a>
+<a href="#">Third-Party Audits</a>
+<a href="#">Responsibility</a>
+<a href="#">Contact</a>
+</div>
+</div>
+<div class="ftr-bottom">
+<p class="ftr-copy">© 2025 J2Co Pte. Ltd. (iBioStim™). Company Registration 202021073D. All protocols proprietary and trade-protected. For qualified institutional investors only.</p>
+<span class="ftr-tag">Just Better. Always.</span>
+</div>
+</div>
+</footer>
+<script>
+
+const _obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.08});
+document.querySelectorAll('.fu').forEach(el=>_obs.observe(el));
+window.addEventListener('scroll',()=>{const n=document.querySelector('nav');if(n)n.style.borderBottomColor=window.scrollY>60?'rgba(74,160,100,0.18)':'rgba(74,160,100,0.09)';});
+
+document.getElementById('mn').addEventListener && window.addEventListener('scroll',()=>{document.getElementById('mn').style.borderBottomColor=window.scrollY>60?'rgba(74,160,100,0.18)':'rgba(74,160,100,0.09)'});
+</script>
+</body>
+</html>

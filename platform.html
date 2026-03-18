@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The $1.4T Platform — iBioStim™ Safe Haven Fund</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#0D1F14;color:#C8D8C8;font-family:'Montserrat',sans-serif;font-weight:300;font-size:15px;line-height:1.75;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.4}
+section{position:relative;z-index:1}
+.si{max-width:1280px;margin:0 auto;padding:0 60px}
+.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#C4A84A;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.sl::after{content:'';display:block;flex:1;height:1px;background:linear-gradient(to right,rgba(74,160,100,0.3),transparent)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,56px);font-weight:300;line-height:1.08;color:#E8F0E8}
+h2 em{font-style:italic;color:#52B87A}
+h3{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2vw,26px);font-weight:300;color:#E8F0E8;line-height:1.2}
+p{font-weight:300;line-height:1.88;color:#C8D8C8}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fu.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.btn-gold{display:inline-flex;align-items:center;gap:10px;background:#2D6B40;color:#E8F0E8;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:14px 40px;text-decoration:none;transition:all .25s}
+.btn-gold:hover{background:#246038}
+.btn-ol{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(74,160,100,0.25);color:#C8D8C8;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:14px 30px;text-decoration:none;transition:all .25s}
+.btn-ol:hover{border-color:#52B87A;color:#52B87A}
+@media(max-width:1024px){.si{padding:0 24px}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(13,31,20,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,160,100,0.15)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.nav-logo span{color:#52B87A}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#7A9A80;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#52B87A}
+.nav-series{font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:8px 18px;border:1px solid rgba(74,160,100,0.2);white-space:nowrap}
+.nav-plat{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#52B87A;padding:8px 16px;border:1px solid rgba(74,160,100,0.25);text-decoration:none;transition:all .25s}
+.nav-plat:hover{background:#2A6B40;color:#E8F0E8}
+.nav-plat-dot{width:5px;height:5px;background:#52B87A;border-radius:50%;flex-shrink:0;animation:ftr-pulse 2s ease-in-out infinite}
+.nav-cta{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#52B87A;border:1px solid rgba(74,160,100,0.25);padding:10px 20px;text-decoration:none;transition:all .25s}
+.nav-cta:hover{background:#2A6B40;color:#E8F0E8}
+@keyframes ftr-pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@media(max-width:1024px){nav{padding:16px 24px}.nav-links,.nav-series{display:none}}
+.mq{overflow:hidden;white-space:nowrap;position:relative;z-index:10;padding:12px 0}
+.mq-inner{display:inline-flex;animation:mq-scroll 40s linear infinite}
+@keyframes mq-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq-inner span{font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:0 40px}
+.mq-inner .sep{padding:0;font-size:8px}
+footer{background:#0A1A10;border-top:1px solid rgba(74,160,100,0.12);padding:52px 60px 32px}
+.ftr{max-width:1280px;margin:0 auto}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(74,160,100,0.1)}
+.ftr-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.ftr-logo span{color:#52B87A}
+.ftr-brand p{font-size:11px;color:#7A9A80;margin-top:12px;line-height:1.8}
+.ftr-mas{margin-top:12px;display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:9px;color:#52B87A;letter-spacing:.12em}
+.ftr-dot{width:5px;height:5px;background:#52B87A;border-radius:50%;animation:ftr-pulse 2s ease-in-out infinite;flex-shrink:0}
+.ftr-col h5{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:14px}
+.ftr-col a{display:block;font-size:11.5px;color:#7A9A80;text-decoration:none;margin-bottom:8px;transition:color .2s}
+.ftr-col a:hover{color:#52B87A}
+.ftr-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-copy{font-size:10px;color:#6A8A70}
+.ftr-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#52B87A}
+@media(max-width:1024px){footer{padding:36px 24px 24px}.ftr-grid{grid-template-columns:1fr 1fr}.ftr-bot{justify-content:center;text-align:center}}
+
+#hero-p{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:160px 60px 120px;position:relative;overflow:hidden}
+.hp-bg1{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,14,8,0) 0%,rgba(8,20,12,0.7) 100%)}
+.hp-bg2{position:absolute;inset:0;background-image:linear-gradient(rgba(74,160,100,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(74,160,100,0.03) 1px,transparent 1px);background-size:80px 80px}
+.hp-content{position:relative;z-index:2}
+.hp-ey{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C4A84A;margin-bottom:28px;display:flex;align-items:center;gap:16px}
+.hp-ey::before{content:'';width:36px;height:1px;background:#C4A84A;display:block}
+.hp-num{font-family:'Cormorant Garamond',serif;font-size:clamp(80px,13vw,180px);font-weight:300;color:#E8F0E8;line-height:.88;letter-spacing:-.02em}
+.hp-num sup{font-size:.22em;color:#C4A84A;vertical-align:super}
+.hp-sub{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7A9A80;margin:16px 0 28px}
+.hp-desc{font-size:15px;color:#A0C0A8;max-width:640px;line-height:2;margin-bottom:44px}
+.hp-desc strong{color:#E8F0E8;font-weight:400}
+.hp-badges{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hpb{display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:#7A9A80;padding:7px 14px;border:1px solid rgba(74,160,100,0.15)}
+.hpb-dot{width:5px;height:5px;border-radius:50%;background:#52B87A;flex-shrink:0}
+.hp-actions{display:flex;gap:14px;flex-wrap:wrap}
+.sec-p{padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.1)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.pillar{background:#0E1E14;padding:36px 32px;border-left:3px solid transparent;transition:all .3s;margin-bottom:2px}
+.pillar:hover{border-left-color:#52B87A;background:#122A1A}
+.pillar h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#E8F0E8;margin-bottom:10px}
+.pillar p{font-size:13px;line-height:1.85}
+.pillar-tag{margin-top:12px;font-family:'DM Mono',monospace;font-size:10px;color:#52B87A;letter-spacing:.1em}
+.tbl-plat{border:1px solid rgba(74,160,100,0.18);overflow:hidden;width:100%}
+.tbl-plat th{background:#0E2016;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#52B87A;padding:13px 18px;text-align:left;border-bottom:1px solid rgba(74,160,100,0.12)}
+.tbl-plat td{padding:13px 18px;font-size:12.5px;color:#C8D8C8;border-bottom:1px solid rgba(74,160,100,0.08);vertical-align:top}
+.tbl-plat tr:last-child td{border-bottom:none}
+.tbl-plat .pos{color:#FFFFFF;font-family:'DM Mono',monospace;font-size:12px;font-weight:400}
+.conv-tile{padding:44px 38px;position:relative;overflow:hidden;transition:background .3s;text-decoration:none;display:block}
+.conv-tile:hover{background:#122A1A}
+.conv-tile::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.conv-tile:hover::after{transform:scaleX(1)}
+.conv-tile.food::after{background:linear-gradient(to right,#2A6A3A,#52B87A)}
+.conv-tile.energy::after{background:linear-gradient(to right,#2A4A6A,#4A8AC8)}
+.conv-tile.data::after{background:linear-gradient(to right,#1A3A8A,#5A9AE8)}
+.ct-icon{font-size:32px;margin-bottom:16px;display:block}
+.ct-num{font-family:'DM Mono',monospace;font-size:9px;color:#C4A84A;letter-spacing:.2em;margin-bottom:14px;display:block}
+.ct-stat{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:#E8F0E8;line-height:1;margin-top:24px}
+.ct-stat sup{font-size:16px;color:#C4A84A}
+.ct-stat-lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7A9A80;margin-top:5px}
+.step-row{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid rgba(74,160,100,0.1);align-items:start}
+.step-row:last-child{border-bottom:none}
+.step-row:first-child{border-top:1px solid rgba(74,160,100,0.1)}
+.step-dot{width:44px;height:44px;border:1px solid rgba(74,160,100,0.3);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:#52B87A;transition:all .3s;background:rgba(10,30,18,0.6)}
+.step-row:hover .step-dot{background:#2A6B40;color:#fff;border-color:#4AA864}
+.step-row h4{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#E8F0E8;margin-bottom:6px}
+.step-row p{font-size:13px;line-height:1.8}
+.cta-plat{padding:140px 0;text-align:center;position:relative;overflow:hidden}
+.cta-plat::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(74,160,100,0.06) 0%,transparent 70%);pointer-events:none}
+@media(max-width:1024px){#hero-p{padding:120px 24px 80px}.two-col{grid-template-columns:1fr;gap:40px}}</style>
+</head>
+<body>
+<nav>
+<a href="ibiostim-redesign.html" class="nav-logo">iBioStim<span>&#8482;</span></a>
+<div class="nav-links">
+<a href="#platform">The Platform</a>
+<a href="#thesis">$1.4T Thesis</a>
+<a href="#numbers">The Numbers</a>
+<a href="#abs">ABS Stack</a>
+<a href="#destination">$1.4T Origin</a>
+<a href="#convergences">Convergences</a>
+<a href="#safehaven">Singapore</a>
+<a href="#exclusive">Access</a>
+</div>
+<a href="#cta" class="nav-cta">Private Placement Enquiry</a>
+</nav>
+
+<section id="hero-p">
+<div class="hp-bg1"></div><div class="hp-bg2"></div>
+<div class="hp-content">
+<div class="hp-ey">MAS-Registered &middot; Singapore &middot; Safe Haven Fund Platform</div>
+<div class="hp-num">$1.4<sup>T</sup></div>
+<div class="hp-sub">100% Asset-Backed &middot; Oil Palm &middot; Food &middot; Bioenergy &middot; Data Centres</div>
+<p class="hp-desc">The world&rsquo;s first off-market institutional vehicle structured to capture the full ABS value of oil palm across three converging economic megatrends &mdash; simultaneously, at scale, and <strong>exclusively through iBioStim&trade; biological infrastructure</strong>.</p>
+<div class="hp-badges">
+<div class="hpb"><div class="hpb-dot"></div>100% Asset-Backed</div>
+<div class="hpb"><div class="hpb-dot"></div>First Principles Valuation</div>
+<div class="hpb"><div class="hpb-dot"></div>MAS Regulated</div>
+<div class="hpb"><div class="hpb-dot"></div>Off-Market Only</div>
+<div class="hpb"><div class="hpb-dot"></div>Institutional Grade</div>
+</div>
+<div class="hp-actions">
+<a href="#cta" class="btn-gold">Private Placement Enquiry &rarr;</a>
+<a href="oilpalm.html" class="btn-ol">Review Oil Palm Asset &rarr;</a>
+</div>
+</div>
+</section>
+
+<div class="mq" style="background:rgba(8,22,12,0.97);border-top:1px solid rgba(74,160,100,0.1);border-bottom:1px solid rgba(74,160,100,0.1)">
+<div class="mq-inner">
+<span style="color:#A0C0A8">$1.4T Asset-Backed Valuation</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">MAS-Registered &middot; Singapore</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">Oil Palm &middot; Food &middot; Bioenergy &middot; Data Centres</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">Three Converging Megatrends</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">500,000+ Hectares Committed</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">Off-Market &middot; Institutional Only</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">$1.4T Asset-Backed Valuation</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">MAS-Registered &middot; Singapore</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">Oil Palm &middot; Food &middot; Bioenergy &middot; Data Centres</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">Three Converging Megatrends</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">500,000+ Hectares Committed</span><span class="sep" style="color:#52B87A">&middot;</span>
+<span style="color:#A0C0A8">Off-Market &middot; Institutional Only</span><span class="sep" style="color:#52B87A">&middot;</span>
+</div></div>
+
+<section id="platform" class="sec-p">
+<div class="si">
+<div class="two-col">
+<div>
+<div class="sl fu">01 &mdash; Platform Architecture</div>
+<h2 class="fu d1">The Fund That Moves<br><em>the Economic Needle</em></h2>
+<p style="margin-top:22px;font-size:14px;" class="fu d2">The $1.4T Safe Haven Fund is not a commodity play. It is a biological infrastructure fund &mdash; owning the protocol layer that makes agricultural land perform at institutional grade. The ABS (Asset-Based Security) valuation is derived from first principles: verified field performance, auditable cash flow architecture, and three independent megatrend demand drivers converging on the same asset base.</p>
+<p style="font-size:14px;margin-top:16px;" class="fu d3">Unlike conventional agricultural funds that price on commodity cycles, this platform prices on biological output certainty &mdash; a fundamentally different risk architecture that is uncorrelated with global commodity indices and immune to the geopolitical supply shocks that drive food inflation.</p>
+</div>
+<div class="fu d2">
+<table class="tbl-plat">
+<thead><tr><th>Structure Element</th><th>Specification</th></tr></thead>
+<tbody>
+<tr><td>Fund Type</td><td class="pos">MAS-Registered Safe Haven Vehicle</td></tr>
+<tr><td>Jurisdiction</td><td class="pos">Republic of Singapore</td></tr>
+<tr><td>ABS Valuation Basis</td><td class="pos">First Principles &middot; 100% Asset-Backed</td></tr>
+<tr><td>Primary Asset</td><td class="pos">Oil Palm Biological Infrastructure</td></tr>
+<tr><td>Megatrend Anchors</td><td class="pos">Food &middot; Bioenergy &middot; Data Centres</td></tr>
+<tr><td>Committed Hectares</td><td class="pos">500,000+</td></tr>
+<tr><td>Access Model</td><td class="pos">Off-Market &middot; Qualified Intro Only</td></tr>
+<tr><td>Yield Model</td><td class="pos">P10/P50/P90 ML-Calibrated</td></tr>
+<tr><td>Minimum Partner Scale</td><td class="pos">Institutional Grade</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<section id="thesis" class="sec-p">
+<div class="si">
+<div class="sl fu">02 &mdash; The $1.4T ABS Thesis</div>
+<h2 class="fu d1" style="max-width:700px">Three Megatrends.<br>One Asset Class.<br><em>No Viable Alternative.</em></h2>
+<p style="margin-top:22px;font-size:14px;max-width:720px;" class="fu d2">The $1.4T valuation is not a multiple &mdash; it is a first-principles summation of three independently quantifiable global demand signals, all converging on the same physical asset base. Remove any one of the three and the thesis still holds at institutional scale. All three together make this the most asymmetric biological capital opportunity available to institutional investors today.</p>
+<div style="margin-top:52px" class="fu d3">
+<div class="pillar"><h4>&#127807; Food Security &mdash; $850B+ Anchored Demand</h4><p>Indonesia and Malaysia supply 85&ndash;90% of global palm oil &mdash; nearly a third of all traded vegetable oil. The food system is structurally dependent on this supply. There is no scalable substitute. iBioStim&trade; operates as the biological infrastructure layer that makes this irreplaceable supply predictable, compounding, and institutionally accessible.</p><div class="pillar-tag">&rarr; &ge;46 MT FFB/ha/year &middot; 2.34&times; industry standard &middot; 500K+ ha committed</div></div>
+<div class="pillar"><h4>&#9889; Bioenergy &mdash; Sovereign Energy Independence Mandate</h4><p>Palm oil is the most energy-dense biological feedstock on the planet &mdash; 7.3 tonnes of oil per hectare, higher than any competing crop. As sovereign energy independence becomes a national security mandate across Southeast Asia, Platform land carries simultaneous food production value and strategic national energy asset designation.</p><div class="pillar-tag">&rarr; 7.3T oil/ha &middot; Highest of any crop &middot; Sovereign mandate grade</div></div>
+<div class="pillar"><h4>&#128421;&#65039; Data Centres &mdash; $1T+ AI Infrastructure Build-Out</h4><p>The global AI economy requires power and cooling infrastructure at extraordinary scale. Palm biomass and biogas &mdash; geographically co-located with the emerging Southeast Asian data centre corridor &mdash; position Platform land as the physical energy infrastructure layer of the AI economy. This is the economic needle mover that elevates the fund from agricultural to technology infrastructure classification.</p><div class="pillar-tag">&rarr; $1T+ global data centre investment 2024&ndash;2030 &middot; Southeast Asia corridor</div></div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 03 — THE VERIFIED NUMBERS
+════════════════════════════════════════════════════ -->
+<section id="numbers" class="sec-p">
+<div class="si">
+<div class="sl fu">03 &mdash; The Verified Numbers &mdash; Audited &middot; Deterministic &middot; 27 Feb 2026</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">$55.63M<br>Net Added Value.<br><em>Per Year. Per 10,000 ha.</em></h2>
+<p style="margin-top:22px;font-size:14px;" class="fu d2">Every number below is independently audited. The P50 Monte Carlo output matches the deterministic model exactly &mdash; a signal that the underlying field data is internally consistent, not modelled to fit. This is the financial engine the $1.4T thesis is built on.</p>
+<div style="margin-top:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(74,160,100,0.1)" class="fu d3">
+  <div style="background:#0E1E14;padding:28px 22px;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:#52B87A;line-height:1">$55.63<span style="font-size:22px">M</span></div>
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#7A9A80;margin-top:8px">Net Added Value / yr / 10k ha</div>
+  </div>
+  <div style="background:#0E1E14;padding:28px 22px;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:#52B87A;line-height:1">48.8<span style="font-size:22px">%</span></div>
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#7A9A80;margin-top:8px">EBITDA Margin</div>
+  </div>
+  <div style="background:#0E1E14;padding:28px 22px;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:#C4A84A;line-height:1">2.34<span style="font-size:22px">&times;</span></div>
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#7A9A80;margin-top:8px">Verified Yield Multiplier</div>
+  </div>
+  <div style="background:#0E1E14;padding:28px 22px;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:#C4A84A;line-height:1">4<span style="font-size:22px">mo</span></div>
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#7A9A80;margin-top:8px">First Results vs &gt;12 Months Industry</div>
+  </div>
+</div>
+<p style="font-size:11px;color:#4A6A50;margin-top:16px;" class="fu d4">All USD &middot; CPO @$800/MT &middot; 10,000 ha basis &middot; Before 宝盛 protocol licensing fee &middot; Indonesia / Malaysia &middot; Independent audit 27 Feb 2026 &middot; P50 Monte Carlo matches deterministic model exactly</p>
+</div>
+
+<div class="fu d2">
+<table class="tbl-plat">
+<thead><tr><th>Metric</th><th>Conventional</th><th>宝盛 Protocol</th><th>Delta</th></tr></thead>
+<tbody>
+<tr>
+  <td>FFB Yield / ha</td>
+  <td style="color:#6E8E76;font-family:'DM Mono',monospace;font-size:12px">15&ndash;25 MT</td>
+  <td class="pos">&ge;46 MT</td>
+  <td style="color:#C4A84A;font-family:'DM Mono',monospace;font-size:12px">+84%</td>
+</tr>
+<tr>
+  <td>Oil Extraction Rate</td>
+  <td style="color:#6E8E76;font-family:'DM Mono',monospace;font-size:12px">~20%</td>
+  <td class="pos">26.45%</td>
+  <td style="color:#C4A84A;font-family:'DM Mono',monospace;font-size:12px">+32%</td>
+</tr>
+<tr>
+  <td>CPO Output / 10k ha</td>
+  <td style="color:#6E8E76;font-family:'DM Mono',monospace;font-size:12px">50,000 MT</td>
+  <td class="pos">121,670 MT</td>
+  <td style="color:#C4A84A;font-family:'DM Mono',monospace;font-size:12px">+143%</td>
+</tr>
+<tr>
+  <td>CPO Revenue</td>
+  <td style="color:#6E8E76;font-family:'DM Mono',monospace;font-size:12px">$40.00M</td>
+  <td class="pos">$97.34M</td>
+  <td style="color:#C4A84A;font-family:'DM Mono',monospace;font-size:12px">+$57.34M</td>
+</tr>
+<tr>
+  <td>Total Revenue</td>
+  <td style="color:#6E8E76;font-family:'DM Mono',monospace;font-size:12px">$49.07M</td>
+  <td class="pos">$114.02M</td>
+  <td style="color:#C4A84A;font-family:'DM Mono',monospace;font-size:12px">+$64.95M</td>
+</tr>
+<tr>
+  <td style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:#E8F0E8">Net Added Value</td>
+  <td style="color:#4A6A50;font-family:'DM Mono',monospace;font-size:12px">&mdash;</td>
+  <td style="color:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300">$55.63M/yr</td>
+  <td style="color:#52B87A;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em">VERIFIED</td>
+</tr>
+</tbody>
+</table>
+
+<div style="margin-top:16px;background:#0E1E14;border:1px solid rgba(74,160,100,0.15);padding:28px">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#C4A84A;margin-bottom:16px">Asset Structure &mdash; Three Independent Capital Protection Layers</div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:12px 0;border-bottom:1px solid rgba(74,160,100,0.08)">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#C4A84A;font-weight:600">01</div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:#E8F0E8;margin-bottom:3px">Freehold Plantation Land</div><div style="font-size:11px;color:#7A9A80">$200M+ revaluation &middot; 10k ha &middot; by 2029 &middot; Appreciates every cycle &middot; Independent of CPO price</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:12px 0;border-bottom:1px solid rgba(74,160,100,0.08)">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#C4A84A;font-weight:600">02</div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:#E8F0E8;margin-bottom:3px">Listed PLC Equity</div><div style="font-size:11px;color:#7A9A80">Bursa / IDX &middot; Liquid &middot; Exchange-governed &middot; Full EBITDA expansion captured &middot; Liquid exit via exchange</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:12px 0">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#C4A84A;font-weight:600">03</div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:#E8F0E8;margin-bottom:3px">Locked Offtake</div><div style="font-size:11px;color:#7A9A80">Contracted incremental CPO from Year 1 &middot; Revenue certainty before re-rating &middot; Priority rights &middot; Founding LPs only</div></div>
+    </div>
+  </div>
+  <div style="margin-top:16px;font-family:'DM Mono',monospace;font-size:9px;color:#3A5A42;letter-spacing:.12em">Downside = plantation land value. Not zero.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 04 — THE ABS MULTIPLIER STACK
+════════════════════════════════════════════════════ -->
+<section id="abs" class="sec-p">
+<div class="si">
+<div class="sl fu">04 &mdash; The ABS Multiplier &mdash; How One Deployment Builds an Economy</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">One Asset.<br>Issued into Paper.<br><em>Compounds Forever.</em></h2>
+<p style="margin-top:22px;font-size:14px;" class="fu d2">This is not investing in a plantation. It is building an asset-backed economy from verified yield. Each layer uses the layer beneath it as collateral and amplifies it. The same acre of land that produces CPO also underwrites ABS paper trading at 8&ndash;12&times; the contracted offtake value &mdash; independently, on secondary markets, perpetually.</p>
+<p style="font-size:14px;margin-top:16px;" class="fu d3">Machine learning turns verified field data into forward contracts. Forward contracts underpin ABS. ABS compounds into $1.4T. The biological protocol is the single determinant of whether this chain activates.</p>
+</div>
+
+<div class="fu d2">
+<!-- Four-layer ABS stack -->
+<div style="display:flex;flex-direction:column;gap:2px">
+
+  <div style="background:#0E1E14;border-left:3px solid #C4A84A;padding:28px 28px 24px">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#C4A84A;margin-bottom:10px">Layer 1 &middot; Hard Collateral</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#E8F0E8;margin-bottom:6px">Freehold Plantation Land</div>
+    <div style="font-size:12.5px;color:#A0C0A8">Fund-owned &middot; appreciating &middot; independent of CPO price. $200M+ revaluation per 10k ha by 2029. Hard collateral that improves with every 宝盛 protocol cycle.</div>
+  </div>
+
+  <div style="text-align:center;padding:6px 0;color:#2A6B40;font-size:18px">&#8595;</div>
+
+  <div style="background:#0E1E14;border-left:3px solid #52B87A;padding:28px 28px 24px">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:10px">Layer 2 &middot; Contracted Cashflow</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#E8F0E8;margin-bottom:6px">Locked Offtake Revenue</div>
+    <div style="font-size:12.5px;color:#A0C0A8">Incremental CPO contracted from Year 1. $57.34M additional revenue per year per 10,000 ha. Audited quarterly. Underpins the ABS cashflow model and activates forward contract pricing.</div>
+  </div>
+
+  <div style="text-align:center;padding:6px 0;color:#2A6B40;font-size:18px">&#8595;</div>
+
+  <div style="background:#0E1E14;border-left:3px solid #5A9AE8;padding:28px 28px 24px">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#5A9AE8;margin-bottom:10px">Layer 3 &middot; ABS Issuance</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#E8F0E8;margin-bottom:6px">Asset-Backed Securities</div>
+    <div style="font-size:12.5px;color:#A0C0A8">Land + offtake as collateral. Institutional-grade paper. <strong style="color:#E8F0E8">8&ndash;12&times; multiplier</strong> on underlying assets &mdash; $8&ndash;12 of tradeable paper per $1 of contracted offtake. Trades independently on secondary markets.</div>
+  </div>
+
+  <div style="text-align:center;padding:6px 0;color:#2A6B40;font-size:18px">&#8595;</div>
+
+  <div style="background:#0E1E14;border-left:3px solid #2ABCC8;padding:28px 28px 24px">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#2ABCC8;margin-bottom:10px">Layer 4 &middot; Sovereign Accumulation</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#E8F0E8;margin-bottom:6px">Institutional Paper Market</div>
+    <div style="font-size:12.5px;color:#A0C0A8">SWFs &middot; pension funds &middot; sovereign buyers &middot; secondary market. Compounding base across 20M ha ASEAN PLC landbank. ABS floor rises as model accuracy improves each cycle.</div>
+  </div>
+
+  <div style="text-align:center;padding:6px 0;color:#2A6B40;font-size:18px">&#8595;</div>
+
+  <div style="background:rgba(74,160,100,0.06);border:1px solid rgba(74,160,100,0.2);padding:28px;text-align:center">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:10px">Destination &middot; Economy Scale</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:#E8F0E8;line-height:1">$1.4<span style="font-size:26px;color:#C4A84A">T</span></div>
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;color:#7A9A80;margin-top:8px">8&ndash;12&times; ABS multiple &middot; $0.9&ndash;1.4T range &middot; 20M ha deployed</div>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 05 — THE $1.4T ORIGIN — THE MATHS
+════════════════════════════════════════════════════ -->
+<section id="destination" class="sec-p">
+<div class="si">
+<div class="sl fu">05 &mdash; The $1.4T Origin &mdash; Not a Projection. A National Security Valuation.</div>
+<h2 class="fu d1" style="max-width:720px">The Maths Is<br>Audit-Gated<br><em>at Every Step.</em></h2>
+<p style="margin-top:22px;font-size:14px;max-width:700px;" class="fu d2">The $1.4T figure is not a fund target. It is the dollar value of controlling ASEAN food, energy, and digital infrastructure simultaneously &mdash; derived from first principles, not applied multiples. Each step in the derivation is independently verifiable. Scale is locked behind audit gates: no phase progresses without the previous phase's data being verified.</p>
+
+<!-- The maths chain -->
+<div style="margin-top:56px;display:grid;grid-template-columns:repeat(5,1fr) auto;gap:0;align-items:stretch;" class="fu d3">
+
+  <div style="background:#0E1E14;border:1px solid rgba(74,160,100,0.12);padding:28px 20px;text-align:center;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7A9A80;margin-bottom:12px">ASEAN PLC Landbank</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:#E8F0E8;line-height:1">20M<span style="font-size:18px;color:#7A9A80"> ha</span></div>
+    <div style="font-size:10px;color:#4A6A50;margin-top:12px">Listed PLC landbank &middot; ASEAN</div>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:center;padding:0 8px">
+    <div style="text-align:center">
+      <div style="color:#2A6B40;font-size:20px">&divide;</div>
+      <div style="font-family:'DM Mono',monospace;font-size:9px;color:#2A6B40;letter-spacing:.1em">10,000</div>
+      <div style="font-size:9px;color:#3A5A42;margin-top:2px">= 2,000<br>units</div>
+    </div>
+  </div>
+
+  <div style="background:#0E1E14;border:1px solid rgba(74,160,100,0.12);padding:28px 20px;text-align:center;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7A9A80;margin-bottom:12px">P50 EBITDA / Unit</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:#52B87A;line-height:1">$55.63<span style="font-size:18px;color:#7A9A80">M</span></div>
+    <div style="font-size:10px;color:#4A6A50;margin-top:12px">Per 10,000 ha &middot; per year &middot; verified</div>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:center;padding:0 8px">
+    <div style="text-align:center">
+      <div style="color:#2A6B40;font-size:20px">=</div>
+      <div style="font-family:'DM Mono',monospace;font-size:9px;color:#2A6B40;letter-spacing:.1em">Annual</div>
+      <div style="font-size:9px;color:#3A5A42;margin-top:2px">EBITDA</div>
+    </div>
+  </div>
+
+  <div style="background:#0E1E14;border:1px solid rgba(74,160,100,0.12);padding:28px 20px;text-align:center;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7A9A80;margin-bottom:12px">Annual ASEAN EBITDA</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:#52B87A;line-height:1">$111<span style="font-size:18px;color:#7A9A80">B</span></div>
+    <div style="font-size:10px;color:#4A6A50;margin-top:12px">P50 &middot; 20M ha</div>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:center;padding:0 8px">
+    <div style="text-align:center">
+      <div style="color:#2A6B40;font-size:20px">&times;</div>
+      <div style="font-family:'DM Mono',monospace;font-size:9px;color:#2A6B40;letter-spacing:.1em">12.5&times;</div>
+      <div style="font-size:9px;color:#3A5A42;margin-top:2px">EBITDA<br>multiple</div>
+    </div>
+  </div>
+
+</div><!-- end maths chain -->
+
+<!-- Result callout -->
+<div style="margin-top:2px;background:rgba(74,160,100,0.06);border:1px solid rgba(74,160,100,0.2);padding:44px 52px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;" class="fu d4">
+  <div>
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:12px">ASEAN Asset Capitalisation Value &middot; 20M ha &middot; 12.5&times; EBITDA Multiple</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:300;color:#E8F0E8;line-height:1">$1.39<span style="font-size:36px;color:#C4A84A">T</span></div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;color:#7A9A80;margin-top:10px">&#8776; $1.4 Trillion</div>
+  </div>
+  <div style="max-width:420px">
+    <p style="font-size:13px;line-height:1.9;color:#A0C0A8">This is not a fund target. This is the dollar value of controlling ASEAN food, energy, and digital infrastructure simultaneously. Governments will pay to access this. Sovereign funds will compete for it. Those who move now own it.</p>
+    <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#52B87A;letter-spacing:.1em">$111B &middot; Annual EBITDA &middot; P50 &middot; 20M ha</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#7A9A80;letter-spacing:.1em">$0.9&ndash;1.4T &middot; ABS Range &middot; 8&ndash;12&times; Multiple</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#7A9A80;letter-spacing:.1em">20M ha &middot; ASEAN PLC Landbank</div>
+    </div>
+  </div>
+</div>
+
+<!-- Audit gate progression -->
+<div style="margin-top:16px;background:#0E1E14;border:1px solid rgba(74,160,100,0.12);padding:28px 32px;" class="fu">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:18px">Scale is Audit-Gated &middot; Every Phase Verified Before the Next</div>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em">
+    <span style="background:rgba(74,160,100,0.1);border:1px solid rgba(74,160,100,0.2);padding:9px 14px;color:#52B87A">100 ha Pilot</span>
+    <span style="color:#2A6B40;padding:0 8px">&rarr;</span>
+    <span style="background:rgba(74,160,100,0.08);border:1px solid rgba(74,160,100,0.15);padding:9px 14px;color:#52B87A">10,000 ha</span>
+    <span style="color:#2A6B40;padding:0 8px">&rarr;</span>
+    <span style="background:rgba(74,160,100,0.06);border:1px solid rgba(74,160,100,0.12);padding:9px 14px;color:#7A9A80">500,000 ha</span>
+    <span style="color:#2A6B40;padding:0 8px">&rarr;</span>
+    <span style="background:rgba(74,160,100,0.04);border:1px solid rgba(74,160,100,0.1);padding:9px 14px;color:#7A9A80">20M ha</span>
+    <span style="color:#2A6B40;padding:0 8px">&rarr;</span>
+    <span style="background:rgba(196,168,74,0.08);border:1px solid rgba(196,168,74,0.2);padding:9px 14px;color:#C4A84A">$1.4T</span>
+  </div>
+  <div style="margin-top:12px;font-size:11px;color:#4A6A50">Independent validation required at each gate. Scale cannot be assumed &mdash; it must be earned through verified field performance.</div>
+</div>
+
+</div>
+</section>
+
+<section id="convergences" class="sec-p">
+<div class="si">
+<div class="sl fu">06 &mdash; Three Convergences</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(74,160,100,0.08);margin-top:24px" class="fu d1">
+<div class="conv-tile food" style="background:#0E1E14">
+<span class="ct-num">Convergence 01</span><span class="ct-icon">&#127807;</span>
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#F0EBE0;margin-bottom:6px">Food Security</h3>
+<span style="font-family:'DM Mono',monospace;font-size:9px;color:#52B87A;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:block">Global Vegetable Oil Infrastructure</span>
+<p style="font-size:13px;color:#8A90A0;line-height:1.8">85&ndash;90% of global palm oil from two countries. A third of all traded vegetable oil. No viable substitute at commercial scale. Food system infrastructure &mdash; at 2.34&times; the productivity standard.</p>
+<div class="ct-stat">85<sup>%</sup></div><div class="ct-stat-lbl">Global supply concentration</div>
+</div>
+<div class="conv-tile energy" style="background:#0E1E14">
+<span class="ct-num">Convergence 02</span><span class="ct-icon">&#9889;</span>
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#F0EBE0;margin-bottom:6px">Bioenergy</h3>
+<span style="font-family:'DM Mono',monospace;font-size:9px;color:#6AAAE8;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:block">Sovereign Energy Independence</span>
+<p style="font-size:13px;color:#8A90A0;line-height:1.8">The most energy-dense biological feedstock on earth. Sovereign energy mandates compressing timelines globally. Platform land is food production and strategic energy infrastructure simultaneously.</p>
+<div class="ct-stat">7.3<sup>T/ha</sup></div><div class="ct-stat-lbl">Highest oil yield of any crop</div>
+</div>
+<div class="conv-tile data" style="background:#0E1E14">
+<span class="ct-num">Convergence 03</span><span class="ct-icon">&#128421;&#65039;</span>
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#F0EBE0;margin-bottom:6px">Data Centres</h3>
+<span style="font-family:'DM Mono',monospace;font-size:9px;color:#5A9AE8;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:block">The AI Infrastructure Vision</span>
+<p style="font-size:13px;color:#8A90A0;line-height:1.8">AI demands power and cooling at scale. Tropical land co-located with palm bioenergy is the emerging preferred geography for data centre deployment. The economic needle mover.</p>
+<div class="ct-stat">$1T<sup>+</sup></div><div class="ct-stat-lbl">Global data centre investment 2024&ndash;2030</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="safehaven" class="sec-p">
+<div class="si">
+<div class="sl fu">07 &mdash; Singapore Safe Haven Advantage</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">Why Singapore.<br><em>Why MAS.</em><br>Why Now.</h2>
+<p style="margin-top:22px;font-size:14px;" class="fu d2">Singapore is the only jurisdiction in the world that simultaneously provides MAS-grade regulatory certainty, AAA sovereign credit backing, political neutrality acceptable to every global capital source, and geographic centrality to the Southeast Asian oil palm production corridor. The fund&rsquo;s MAS registration is not a compliance checkbox. It is the foundation of the safe haven architecture.</p>
+<p style="font-size:14px;margin-top:16px;" class="fu d3">For pension funds with fiduciary obligations, SWFs with sovereign mandate constraints, and family offices with multi-jurisdictional structures, Singapore&rsquo;s regulatory framework is the only platform that satisfies all compliance requirements simultaneously. No other jurisdiction offers this combination.</p>
+</div>
+<div class="fu d2">
+<table class="tbl-plat">
+<thead><tr><th>Singapore Advantage</th><th>Institutional Significance</th></tr></thead>
+<tbody>
+<tr><td>MAS Regulation</td><td class="pos">AAA sovereign oversight</td></tr>
+<tr><td>Political Neutrality</td><td class="pos">Acceptable to all capital sources</td></tr>
+<tr><td>Legal Framework</td><td class="pos">Common law &middot; English jurisdiction</td></tr>
+<tr><td>Tax Efficiency</td><td class="pos">Treaty network &middot; No capital gains tax</td></tr>
+<tr><td>Currency Stability</td><td class="pos">SGD &middot; Among world&rsquo;s strongest</td></tr>
+<tr><td>Geographic Position</td><td class="pos">Central to oil palm corridor</td></tr>
+<tr><td>ESG Framework</td><td class="pos">MAS Green Finance taxonomy</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<section id="exclusive" class="sec-p">
+<div class="si">
+<div class="sl fu">08 &mdash; Exclusive Access Framework</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">Not Every<br>Capital Source<br><em>Qualifies.</em></h2>
+<p style="margin-top:22px;font-size:14px;" class="fu d2">We accept a strictly limited number of new partners each year. The Platform is not open to commodity traders, retail investors, or speculative capital. Engagement proceeds by qualified introduction only, with each prospective partner evaluated against mandate alignment, scale, and horizon requirements before a private briefing is extended.</p>
+</div>
+<div class="fu d2">
+<div style="background:#0E1E14;padding:36px;margin-bottom:2px">
+<h4 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#E8F0E8;margin-bottom:16px">Who May Access the Platform</h4>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font-size:13px;color:#C8D8C8;padding-left:16px;border-left:2px solid #52B87A">Sovereign Wealth Funds with food security or strategic land mandates</div>
+<div style="font-size:13px;color:#C8D8C8;padding-left:16px;border-left:2px solid #52B87A">Pension Funds requiring long-duration, auditable agricultural returns</div>
+<div style="font-size:13px;color:#C8D8C8;padding-left:16px;border-left:2px solid #52B87A">Generational Family Offices with multi-decade investment horizons</div>
+<div style="font-size:13px;color:#C8D8C8;padding-left:16px;border-left:2px solid #52B87A">Title Holders with 10,000+ hectares seeking institutional-grade upvaluation</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="capitalcall" class="sec-p">
+<div class="si">
+<div class="sl fu">09 &mdash; Capital Deployment Process</div>
+<h2 class="fu d1" style="max-width:600px">Five Steps.<br><em>No-Regret Capital.</em></h2>
+<div style="margin-top:52px" class="fu d2">
+<div class="step-row"><div class="step-dot">01</div><div><h4>Qualified Introduction</h4><p>Engagement initiated through a trusted intermediary or direct institutional contact. Mandate alignment, scale, and horizon requirements assessed before briefing is extended.</p></div></div>
+<div class="step-row"><div class="step-dot">02</div><div><h4>Private Strategic Briefing</h4><p>Confidential presentation of the full Platform thesis, ABS valuation methodology, and asset-specific performance data. NDA executed before briefing materials are shared.</p></div></div>
+<div class="step-row"><div class="step-dot">03</div><div><h4>Pilot Deployment</h4><p>Minimum pilot hectarage deployed with iBioStim&trade; protocol. Independent third-party data collected. P10/P50/P90 forecast model constructed from pilot-specific data.</p></div></div>
+<div class="step-row"><div class="step-dot">04</div><div><h4>Forecast Validation</h4><p>Calibrated yield and cash flow model validated against pilot results. Full institutional financial projections &mdash; Revenue, EBITDA, Net Profit &mdash; confirmed before full-scale commitment.</p></div></div>
+<div class="step-row"><div class="step-dot">05</div><div><h4>Full-Scale Activation</h4><p>Capital committed to full-scale deployment. Ongoing bi-monthly protocol application. Quarterly performance reporting. Annual third-party audit against projection model.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="cta-plat" id="cta">
+<div class="si" style="position:relative;z-index:1;text-align:center">
+<div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C4A84A;display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px"><span style="display:block;width:36px;height:1px;background:#C4A84A"></span>MAS-Registered &middot; Singapore &middot; By Introduction Only<span style="display:block;width:36px;height:1px;background:#C4A84A"></span></div>
+<h2 style="text-align:center;margin:0 auto 20px;max-width:760px">The Safe Haven Fund That<br><em>Moves the Economic Needle.</em></h2>
+<p style="max-width:520px;margin:0 auto 44px;font-size:14px;text-align:center">Qualified institutional investors, title holders, and sovereign funds are invited for a private strategic briefing. Strictly confidential. By qualified introduction only.</p>
+<div style="display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap">
+<a href="/cdn-cgi/l/email-protection#422b2c33372b303b022b202b2d31362b2f6c212d2f" class="btn-gold">Private Placement Enquiry</a>
+<a href="oilpalm.html" class="btn-ol">Review Oil Palm Asset &rarr;</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="ftr">
+<div class="ftr-grid">
+<div class="ftr-brand"><a href="ibiostim-redesign.html" class="ftr-logo">iBioStim<span>&#8482;</span></a>
+<p>The biological intelligence layer that converts agricultural land into institutional-grade, asset-backed returns. A Product of Singapore.</p>
+<div class="ftr-mas"><div class="ftr-dot"></div>J2Co Pte. Ltd. &middot; 202021073D &middot; Institutional access to MAS-registered fund platforms via the 宝盛 Protocol</div>
+<p style="margin-top:9px;font-size:10px;color:#6A8A70">8 Burn Road 15-13 Trivex, Singapore 369977</p></div>
+<div class="ftr-col"><h5>The Platform</h5>
+<a href="platform.html">$1.4T Safe Haven Fund</a>
+<a href="platform.html#thesis">ABS Thesis</a>
+<a href="platform.html#convergences">Three Convergences</a>
+<a href="platform.html#safehaven">Singapore MAS</a>
+<a href="platform.html#exclusive">Exclusive Access</a></div>
+<div class="ftr-col"><h5>Asset Series</h5>
+<a href="oilpalm.html">Oil Palm &middot; Asset 01</a>
+<a href="chilli.html">Chilli &middot; Asset 02</a>
+<a href="sugarcane.html">Sugarcane &middot; Asset 03</a>
+<a href="rice.html">Rice &middot; Asset 04</a>
+<a href="freshproduce.html">Fresh Produce &middot; Asset 05</a>
+<a href="coffee.html">Coffee &middot; Asset 06</a>
+<a href="banana.html">Banana &middot; Asset 07</a>
+<a href="sweetpotato.html">Sweet Potato &middot; Asset 08</a></div>
+<div class="ftr-col"><h5>Institutional</h5>
+<a href="#">Publications &amp; Data</a>
+<a href="#">Third-Party Audits</a>
+<a href="#">Responsibility</a>
+<a href="#">Contact</a></div>
+</div>
+<div class="ftr-bot">
+<p class="ftr-copy">&copy; 2025 J2Co Pte. Ltd. (iBioStim&#8482;). Company Registration 202021073D. All protocols proprietary and trade-protected. For qualified institutional investors only.</p>
+<span class="ftr-tag">Just Better. Always.</span>
+</div></div></footer>
+<script>const _o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.08});
+document.querySelectorAll('.fu').forEach(el=>_o.observe(el));
+window.addEventListener('scroll',()=>{const n=document.querySelector('nav');if(n)n.style.background=window.scrollY>50?'rgba(13,31,20,0.99)':'rgba(13,31,20,0.97)';});</script>
+</body>
+</html>

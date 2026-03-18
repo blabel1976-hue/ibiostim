@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sugarcane — iBioStim™ Institutional Asset Series</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#0D1F14;color:#C8D8C8;font-family:'Montserrat',sans-serif;font-weight:300;font-size:15px;line-height:1.75;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.4}
+section{position:relative;z-index:1}
+.si{max-width:1280px;margin:0 auto;padding:0 60px}
+.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#C4A84A;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.sl::after{content:'';display:block;flex:1;height:1px;background:linear-gradient(to right,rgba(74,160,100,0.3),transparent)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,56px);font-weight:300;line-height:1.08;color:#E8F0E8}
+h2 em{font-style:italic;color:#52B87A}
+h3{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2vw,26px);font-weight:300;color:#E8F0E8;line-height:1.2}
+p{font-weight:300;line-height:1.88;color:#C0D0C0}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fu.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.btn-prim{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:14px 40px;text-decoration:none;transition:all .25s;color:#E8F0E8}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#C8D8C8;text-decoration:none;transition:color .25s}
+.btn-ghost:hover{color:#52B87A}
+@media(max-width:1024px){.si{padding:0 24px}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(13,31,20,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,160,100,0.15);transition:border-color .4s}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.nav-logo span{color:#52B87A}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#6A9A78;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#52B87A}
+.nav-series{font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border:1px solid rgba(74,160,100,0.2);white-space:nowrap}
+.nav-plat{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#52B87A;padding:8px 14px;border:1px solid rgba(74,160,100,0.3);text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-plat:hover{background:#2A6B40;color:#E8F0E8}
+.nav-plat-dot{width:5px;height:5px;background:#52B87A;border-radius:50%;flex-shrink:0;animation:nav-pulse 2s ease-in-out infinite}
+.nav-cta{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#52B87A;border:1px solid rgba(74,160,100,0.3);padding:10px 18px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-cta:hover{background:#2A6B40;color:#E8F0E8}
+@keyframes nav-pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@media(max-width:1024px){nav{padding:16px 20px}.nav-links,.nav-series{display:none}}
+.mq{overflow:hidden;white-space:nowrap;position:relative;z-index:10;padding:12px 0}
+.mq-inner{display:inline-flex;animation:mq-run 40s linear infinite}
+@keyframes mq-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq-inner span{font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:0 40px}
+.mq-inner .sep{padding:0;font-size:8px}
+footer{background:#0A1A10;border-top:1px solid rgba(74,160,100,0.15);padding:52px 60px 32px}
+.ftr{max-width:1280px;margin:0 auto}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(74,160,100,0.12)}
+.ftr-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.ftr-logo span{color:#52B87A}
+.ftr-brand p{font-size:11px;color:#7AAA82;margin-top:12px;line-height:1.8}
+.ftr-mas{margin-top:12px;display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:9px;color:#52B87A;letter-spacing:.12em}
+.ftr-dot{width:5px;height:5px;background:#52B87A;border-radius:50%;animation:nav-pulse 2s ease-in-out infinite;flex-shrink:0}
+.ftr-col h5{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:14px}
+.ftr-col a{display:block;font-size:11.5px;color:#7AAA82;text-decoration:none;margin-bottom:8px;transition:color .2s}
+.ftr-col a:hover{color:#52B87A}
+.ftr-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-copy{font-size:10px;color:#7AAA82}
+.ftr-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#52B87A}
+@media(max-width:1024px){footer{padding:36px 20px 24px}.ftr-grid{grid-template-columns:1fr 1fr}.ftr-bot{justify-content:center;text-align:center}}
+
+/* ── Hero ── */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 90px;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;z-index:0}
+.hc{position:relative;z-index:2}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7.5vw,112px);font-weight:300;line-height:.95;color:#E8F0E8}
+h1 em{font-style:italic;color:#52B87A}
+.h-ey{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#74C69D;margin-bottom:28px;display:flex;align-items:center;gap:14px}
+.h-ey::before{content:'';width:32px;height:1px;background:#40916C;display:block}
+.h-sub{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.13em;color:#74C69D;margin-top:16px}
+.h-bot{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:56px;padding-top:40px;border-top:1px solid rgba(74,160,100,0.18);align-items:end}
+.h-thesis p{font-size:14px;line-height:1.9}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(74,160,100,0.12)}
+.kpi{background:rgba(10,30,18,0.85);padding:24px 18px;text-align:center}
+.kpi-v{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:#52B87A;line-height:1}
+.kpi-v sup{font-size:15px;color:#C4A84A}
+.kpi-l{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:7px}
+
+/* ── Shared components ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.data-tbl{border-collapse:collapse;width:100%;font-size:12.5px;border:1px solid rgba(74,160,100,0.15)}
+.data-tbl th{background:rgba(74,160,100,0.12);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#52B87A;padding:12px 16px;text-align:left}
+.data-tbl td{padding:12px 16px;border-bottom:1px solid rgba(74,160,100,0.1);color:#C8D8C8;vertical-align:top}
+.data-tbl tr:last-child td{border-bottom:none}
+.pos{color:#FFFFFF;font-family:'DM Mono',monospace;font-size:12px;font-weight:400}
+.neg{color:#6E8E76;font-family:'DM Mono',monospace;font-size:12px}
+.hurdle{background:rgba(74,160,100,0.05);padding:24px 28px;border-left:3px solid transparent;transition:all .3s;margin-bottom:10px;display:flex;gap:18px;align-items:flex-start}
+.hurdle:hover{border-left-color:#4AA864;background:rgba(74,160,100,0.1)}
+.hurdle h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:#E8F0E8;margin-bottom:6px}
+.hurdle p{font-size:12.5px;line-height:1.75}
+.hurdle .solve{margin-top:8px;font-family:'DM Mono',monospace;font-size:10px;color:#52B87A}
+.proto-box{border:1px solid rgba(74,160,100,0.2);padding:36px;background:rgba(10,30,18,0.7)}
+.proto-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#52B87A;margin-bottom:22px}
+.proto-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(74,160,100,0.1);font-size:12.5px}
+.proto-row:last-child{border-bottom:none}
+.proto-val{font-family:'DM Mono',monospace;font-size:12px;color:#C4A84A}
+.disc{border:1px solid rgba(74,160,100,0.15);padding:22px;margin-top:16px;font-size:11px;color:#7AAA82;line-height:1.8;background:rgba(10,30,18,0.5)}
+.disc strong{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#C4A84A}
+.step-r{display:grid;grid-template-columns:50px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid rgba(74,160,100,0.1);align-items:start}
+.step-r:first-child{border-top:1px solid rgba(74,160,100,0.1)}
+.step-r:last-child{border-bottom:none}
+.step-dot{width:40px;height:40px;border:1px solid rgba(74,160,100,0.3);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;color:#52B87A;transition:all .3s;background:rgba(10,30,18,0.7)}
+.step-r:hover .step-dot{background:#2A6B40;color:#E8F0E8;border-color:#4AA864}
+.step-r h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:#E8F0E8;margin-bottom:6px}
+.step-r p{font-size:12.5px;line-height:1.75}
+.ic-stack{display:flex;flex-direction:column;gap:0;margin-top:24px}
+.ic-row{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid rgba(74,160,100,0.1)}
+.ic-row:first-child{border-top:1px solid rgba(74,160,100,0.1)}
+.ic-row:last-child{border-bottom:none}
+.ic-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:#E8F0E8;line-height:1.2;margin-bottom:4px}
+.ev-icon{display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+
+/* ── Evidence Loop Grid ── */
+.ev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(74,160,100,0.1)}
+.ev-card{background:#0D1F14;padding:28px 24px;display:flex;flex-direction:column;gap:12px;transition:background .3s}
+.ev-card:hover{background:#122A1A}
+.ev-card--perpetual{background:#111A0D}
+.ev-card--perpetual:hover{background:#172215}
+.ev-num{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;color:#4AA864}
+.ev-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#E8F0E8;line-height:1.1}
+.ev-data{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(74,160,100,0.1);padding-top:12px;margin-top:auto}
+.ev-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(74,160,100,0.07);font-size:11px;gap:8px}
+.ev-row:last-child{border-bottom:none}
+.ev-row span:first-child{color:#7AAA82;flex-shrink:0}
+.ev-val{font-family:'DM Mono',monospace;font-size:10px;text-align:right}
+.ev-neg{color:#7AAA82}
+.ev-arrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#4AA864;margin-top:8px}
+@media(max-width:1100px){.ev-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.ev-grid{grid-template-columns:1fr}}
+
+/* ── Value Chain Wrap ── */
+.vc-wrap{display:flex;flex-direction:column;align-items:center;width:100%}
+.vcw-row{display:grid;grid-template-columns:1fr 60px 1fr;align-items:center;width:100%;max-width:1000px;gap:0}
+.vcw-row--rev .vcw-card{order:3}.vcw-row--rev .vcw-connector{order:2}.vcw-row--rev .vcw-metric{order:1}
+.vcw-card{padding:32px 36px;border-left:3px solid transparent;transition:all .3s}
+.vcw-card--green{background:rgba(13,31,20,0.8);border-color:rgba(74,160,100,0.2)}
+.vcw-card--green:hover{border-left-color:#4AA864;background:#122A1A}
+.vcw-card--gold{background:rgba(18,14,6,0.7);border-color:rgba(196,168,74,0.2)}
+.vcw-card--gold:hover{border-left-color:#C4A84A;background:#1A1508}
+.vcw-card--teal{background:rgba(0,20,22,0.7);border-color:rgba(42,188,200,0.2)}
+.vcw-card--teal:hover{border-left-color:#2ABCC8;background:#001416}
+.vcw-card--blue{background:rgba(6,12,28,0.7);border-color:rgba(90,154,232,0.2)}
+.vcw-card--blue:hover{border-left-color:#5A9AE8;background:#08101E}
+.vcw-stage{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#E8F0E8;margin-bottom:10px;line-height:1.1}
+.vcw-role{font-size:12.5px;line-height:1.8;color:#A0C0A8}
+.vcw-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06)}
+.vcw-tag--green{color:#52B87A}
+.vcw-tag--gold{color:#C4A84A}
+.vcw-tag--teal{color:#2ABCC8}
+.vcw-tag--blue{color:#5A9AE8}
+.vcw-connector{height:2px;align-self:center;margin:0}
+.vcw-connector--green{background:linear-gradient(to right,rgba(42,138,72,0.15),rgba(42,138,72,0.4),rgba(42,138,72,0.15))}
+.vcw-connector--gold{background:linear-gradient(to right,rgba(184,153,58,0.12),rgba(184,153,58,0.35),rgba(184,153,58,0.12))}
+.vcw-connector--teal{background:linear-gradient(to right,rgba(0,180,190,0.12),rgba(0,180,190,0.35),rgba(0,180,190,0.12))}
+.vcw-connector--blue{background:linear-gradient(to right,rgba(68,128,255,0.12),rgba(68,128,255,0.35),rgba(68,128,255,0.12))}
+.vcw-metric{text-align:center;padding:20px 10px}
+.vcw-m-val{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;line-height:1}
+.vcw-m-lbl{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#7AAA82;margin-top:6px}
+.vcw-m-sub{font-family:'DM Mono',monospace;font-size:9px;color:#7AAA82;margin-top:4px}
+.vcw-arrow{font-size:20px;padding:6px 0;text-align:center}
+.vcw-arrow--green{color:rgba(42,138,72,0.35)}
+.vcw-arrow--gold{color:rgba(184,153,58,0.3)}
+.vcw-arrow--teal{color:rgba(0,180,190,0.3)}
+.vcw-arrow--blue{color:rgba(68,128,255,0.3)}
+@media(max-width:900px){.vcw-row{grid-template-columns:1fr}.vcw-connector{display:none}.vcw-metric{order:0!important;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:16px}.vcw-row--rev .vcw-card,.vcw-row--rev .vcw-metric{order:unset}}
+@media(max-width:1024px){#hero{padding:0 24px 80px}.h-bot,.two-col{grid-template-columns:1fr;gap:40px}.kpis{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="ibiostim-redesign.html" class="nav-logo">iBioStim<span>&#8482;</span></a>
+<div class="nav-links">
+  <a href="#science">C4 Science</a>
+  <a href="#evidence">Evidence Loop</a>
+  <a href="#downstream">Downstream</a>
+  <a href="#bioethanol">Bioethanol</a>
+  <a href="#valuechain">Value Chain</a>
+</div>
+<span class="nav-series" style="color:#52B87A">Sugarcane &middot; Asset 03</span>
+<a href="platform.html" class="nav-plat"><span class="nav-plat-dot"></span>$1.4T Platform</a>
+<a href="#cta" class="nav-cta">Request Briefing</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+<div class="hbg">
+  <div style="position:absolute;inset:0;background:linear-gradient(155deg,rgba(13,31,20,0.2) 0%,rgba(13,31,20,0.65) 40%,rgba(13,31,20,0.97) 100%)"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 65% 50% at 60% 25%,rgba(74,160,100,0.12) 0%,transparent 65%)"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 72px,rgba(42,138,72,0.025) 72px,rgba(42,138,72,0.025) 73px),repeating-linear-gradient(90deg,transparent,transparent 72px,rgba(42,138,72,0.025) 72px,rgba(42,138,72,0.025) 73px)"></div>
+</div>
+<div class="hc">
+<div class="h-ey">Sugarcane &middot; Asset Series 03 &middot; The Unsaid Golden Multiplier</div>
+<h1>Sugarcane.<br>The <em>Unsaid</em><br>Golden Multiplier.</h1>
+<div class="h-sub">C4 Photosynthesis Optimised &middot; +4g/100g Sucrose (Nominal) &middot; Mill&ndash;Refinery&ndash;Bioethanol&ndash;Cogeneration Value Chain</div>
+<div class="h-bot">
+<div class="h-thesis"><p>Sugarcane sits at the intersection of food security, bioenergy mandates, and premium ingredient demand. iBioStim&trade;&rsquo;s C4 optimisation protocol elevates sucrose density by +6g/100g, strengthens drought resilience, and maximises CCS at the cellular level &mdash; cascading into <strong style="color:#E8F0E8">superior mill extraction rates, premium refinery grades, elevated bioethanol yield, and cogeneration uplift</strong> across the entire downstream value chain. Every node benefits from a single biochemical intervention.</p></div>
+<div class="kpis">
+<div class="kpi"><div class="kpi-v">+6<sup>g</sup></div><div class="kpi-l">Sucrose/100g Uplift</div></div>
+<div class="kpi"><div class="kpi-v">+44<sup>%</sup></div><div class="kpi-l">Sugar Yield Per Tonne</div></div>
+<div class="kpi"><div class="kpi-v">100<sup>%</sup></div><div class="kpi-l">Harvest Security</div></div>
+</div></div></div></section>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="mq" style="background:rgba(10,26,16,0.95);border-top:1px solid rgba(74,160,100,0.12);border-bottom:1px solid rgba(74,160,100,0.12)">
+<div class="mq-inner">
+<span style="color:#52B87A">C4 Photosynthesis Optimised</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">+4g/100g Sucrose Uplift (Nominal)</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">+44% Sugar Yield Per Tonne Cane</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#C4A84A">CCS 8&ndash;9% &rarr; 15%</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#C4A84A">ICUMSA 45 White Sugar Access</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#2ABCC8">+26L Bioethanol Per Tonne Cane</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#2ABCC8">140 GWh/yr Bagasse Power (10,000 ha)</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">Drought Harvest Security</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">Zero Synthetic Residues</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">EU &amp; Pharmaceutical Grade Access</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">C4 Photosynthesis Optimised</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">+4g/100g Sucrose Uplift (Nominal)</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">+44% Sugar Yield Per Tonne Cane</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#C4A84A">CCS 8&ndash;9% &rarr; 15%</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#C4A84A">ICUMSA 45 White Sugar Access</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#2ABCC8">+26L Bioethanol Per Tonne Cane</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#2ABCC8">140 GWh/yr Bagasse Power (10,000 ha)</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">Drought Harvest Security</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">Zero Synthetic Residues</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+<span style="color:#52B87A">EU &amp; Pharmaceutical Grade Access</span><span class="sep" style="color:rgba(74,160,100,0.4)">&middot;</span>
+</div></div>
+
+<!-- ═══ SECTION 01 — C4 BIOCHEMISTRY ═══ -->
+<section id="science" style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.1)">
+<div class="si">
+<div class="sl fu">01 &mdash; C4 Biochemistry Optimised</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">C4 Plants Demand<br><em>C4-Grade</em> Biochemistry.</h2>
+<p style="margin-top:22px;font-size:14px;" class="fu d2">Sugarcane uses the Hatch-Slack pathway &mdash; a two-stage carbon fixation mechanism uniquely efficient at concentrating CO&#8322; for sucrose synthesis, but sensitive to specific biochemical constraints that conventional inputs never address. iBioStim&trade; was designed precisely for this pathway.</p>
+<div class="hurdle fu d3">
+  <span style="font-size:20px">&#127807;</span>
+  <div><h4>Sucrose Uplift Cascade</h4><p>+4g/100g sucrose elevation (nominal) flows from field Brix &rarr; CCS at mill &rarr; premium refinery grades &rarr; superior ethanol yield per tonne. Every node of the value chain benefits from a single biochemical intervention at the root zone.</p><div class="solve">&rarr; CCS 8&ndash;9 &rarr; 15 &middot; +44% sugar yield/T cane &middot; +26L ethanol/T cane</div></div>
+</div>
+<div class="hurdle fu d4">
+  <span style="font-size:20px">&#127964;</span>
+  <div><h4>Drought Harvest Security</h4><p>Elevated dry matter accumulation provides a biochemical reserve that maintains sucrose accumulation even when water availability is constrained &mdash; preserving CCS quality through dry season events that typically dilute competitor crops.</p><div class="solve">&rarr; CCS secured through dry season &middot; 100% harvest certainty</div></div>
+</div>
+<div class="hurdle fu">
+  <span style="font-size:20px">&#9855;</span>
+  <div><h4>Zero Synthetic Inputs</h4><p>Non-detect (ND) agrochemical residues across all tested parameters &mdash; enabling simultaneous access to EU premium white sugar, pharmaceutical-grade sucrose supply chains, and ESG-linked financing structures.</p><div class="solve">&rarr; ND residues &middot; EU food law compliant &middot; pharmaceutical grade eligible</div></div>
+</div>
+</div>
+<div class="fu d2">
+<table class="data-tbl">
+<thead><tr><th>Metric</th><th>Conventional</th><th>iBioStim&trade;</th></tr></thead>
+<tbody>
+<tr><td>Sucrose content</td><td class="neg">~9 g/100g</td><td class="pos">~13 g/100g (+4g nominal)</td></tr>
+<tr><td>CCS (Commercial Cane Sugar)</td><td class="neg">8&ndash;9 CCS</td><td class="pos">15 CCS (+6&ndash;7 units)</td></tr>
+<tr><td>Sugar yield / T cane</td><td class="neg">~90 kg/T</td><td class="pos">~130 kg/T (+44%)</td></tr>
+<tr><td>CCS (dry season)</td><td class="neg">Diluted &mdash; CCS drops</td><td class="pos">Secured &mdash; CCS held</td></tr>
+<tr><td>Bioethanol yield / T cane</td><td class="neg">~72 L/T</td><td class="pos">~98 L/T (+26L)</td></tr>
+<tr><td>Harvest timing</td><td class="neg">Weather-dependent</td><td class="pos">Crop-controlled</td></tr>
+<tr><td>Synthetic residues</td><td class="neg">Present</td><td class="pos">Zero (ND)</td></tr>
+<tr><td>Refinery grade access</td><td class="neg">Raw sugar only</td><td class="pos">ICUMSA 45 &middot; pharma grade</td></tr>
+<tr><td>ESG eligibility</td><td class="neg">Limited</td><td class="pos">Full access</td></tr>
+</tbody></table>
+<div style="margin-top:20px;border:1px solid rgba(74,160,100,0.2);padding:28px;background:rgba(74,160,100,0.04)">
+<div class="proto-title" style="margin-bottom:14px">Protocol Specification</div>
+<div class="proto-row"><span>Primary formulations</span><span class="proto-val">Mr Carbon + Junior Plus</span></div>
+<div class="proto-row"><span>Application frequency</span><span class="proto-val">Twice monthly</span></div>
+<div class="proto-row"><span>Biochemical response</span><span class="proto-val">24&ndash;72 hours</span></div>
+<div class="proto-row"><span>Sucrose response visible</span><span class="proto-val">2&ndash;4 weeks</span></div>
+<div class="proto-row"><span>Synthetic inputs</span><span class="proto-val">Zero</span></div>
+<div class="proto-row"><span>Harvest security</span><span class="proto-val">100%</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══ SECTION 02 — EVIDENCE LOOP ═══ -->
+<section id="evidence" style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.1);background:linear-gradient(180deg,rgba(5,15,8,0.6) 0%,transparent 40%)">
+<div class="si">
+<div class="sl fu">02 &mdash; The Complete Evidence Loop &mdash; 8 Steps &mdash; Field to Revenue</div>
+<div style="margin-bottom:56px">
+<h2 class="fu d1">Sucrose &rarr; CCS &rarr; Mill &rarr; Refinery<br>&rarr; Ethanol &rarr; Power &rarr; <em>Perpetual Yield.</em></h2>
+<p class="fu d2" style="margin-top:22px;font-size:14px;max-width:700px">Every output is caused by the previous step. The chain is internally consistent and closed &mdash; the final step loops back to Step 1 with stronger soil biology than the cycle began on. This is not correlation. It is a documented biochemical and commercial sequence.</p>
+</div>
+
+<div class="ev-grid fu d2">
+
+  <div class="ev-card">
+    <div class="ev-num">01</div>
+    <div class="ev-title">C4 Pathway Activation</div>
+    <div class="ev-icon"><span style="color:#52B87A;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>Formulations applied</span><span class="ev-val" style="color:#52B87A">Mr Carbon + Junior Plus</span></div>
+      <div class="ev-row"><span>Biochemical response</span><span class="ev-val" style="color:#52B87A">24&ndash;72 hours</span></div>
+      <div class="ev-row"><span>Brix signal visible</span><span class="ev-val" style="color:#52B87A">2&ndash;4 weeks</span></div>
+      <div class="ev-row"><span>Synthetic inputs</span><span class="ev-val" style="color:#52B87A">Zero</span></div>
+    </div>
+    <div class="ev-arrow">C4 drives sucrose &#8595;</div>
+  </div>
+
+  <div class="ev-card">
+    <div class="ev-num">02</div>
+    <div class="ev-title">Sucrose Density Uplift</div>
+    <div class="ev-icon"><span style="color:#52B87A;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14.5 2v6l4.5 9H5l4.5-9V2"/><path d="M9 2h6"/><path d="M6 19h2m4 0h2"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>Sucrose (conventional)</span><span class="ev-val ev-neg">~9 g/100g</span></div>
+      <div class="ev-row"><span>Sucrose (iBioStim&trade;)</span><span class="ev-val" style="color:#52B87A">~13 g/100g (nominal)</span></div>
+      <div class="ev-row"><span>Uplift</span><span class="ev-val" style="color:#52B87A">+4g/100g nominal &middot; +44%</span></div>
+      <div class="ev-row"><span>Dry season</span><span class="ev-val" style="color:#52B87A">Level held &mdash; no dilution</span></div>
+    </div>
+    <div class="ev-arrow">Sucrose drives CCS &#8595;</div>
+  </div>
+
+  <div class="ev-card">
+    <div class="ev-num">03</div>
+    <div class="ev-title">CCS Elevation at Mill</div>
+    <div class="ev-icon"><span style="color:#C4A84A;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>CCS (conventional)</span><span class="ev-val ev-neg">8&ndash;9 CCS</span></div>
+      <div class="ev-row"><span>CCS (iBioStim&trade;)</span><span class="ev-val" style="color:#52B87A">15 CCS (consistent)</span></div>
+      <div class="ev-row"><span>Uplift</span><span class="ev-val" style="color:#52B87A">+6&ndash;7 units</span></div>
+      <div class="ev-row"><span>Mill premium / CCS unit</span><span class="ev-val" style="color:#C4A84A">Priced per unit by mill</span></div>
+    </div>
+    <div class="ev-arrow">CCS drives sugar yield &#8595;</div>
+  </div>
+
+  <div class="ev-card">
+    <div class="ev-num">04</div>
+    <div class="ev-title">Sugar Yield per Tonne</div>
+    <div class="ev-icon"><span style="color:#C4A84A;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>Sugar yield (conventional)</span><span class="ev-val ev-neg">~90 kg/T cane</span></div>
+      <div class="ev-row"><span>Sugar yield (iBioStim&trade;)</span><span class="ev-val" style="color:#52B87A">~130 kg/T cane</span></div>
+      <div class="ev-row"><span>Uplift</span><span class="ev-val" style="color:#52B87A">+40 kg/T cane (+44%)</span></div>
+      <div class="ev-row"><span>At 70 T/ha harvest</span><span class="ev-val" style="color:#C4A84A">+4.2 T sugar/ha</span></div>
+    </div>
+    <div class="ev-arrow">Yield drives refinery &#8595;</div>
+  </div>
+
+  <div class="ev-card">
+    <div class="ev-num">05</div>
+    <div class="ev-title">Refinery Grade Premium</div>
+    <div class="ev-icon"><span style="color:#C4A84A;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>Conventional access</span><span class="ev-val ev-neg">Raw sugar only</span></div>
+      <div class="ev-row"><span>iBioStim&trade; access</span><span class="ev-val" style="color:#C4A84A">ICUMSA 45 white sugar</span></div>
+      <div class="ev-row"><span>Pharmaceutical grade</span><span class="ev-val" style="color:#C4A84A">Eligible (ND residues)</span></div>
+      <div class="ev-row"><span>ESG premium</span><span class="ev-val" style="color:#C4A84A">Full access</span></div>
+    </div>
+    <div class="ev-arrow">Grade drives pricing &#8595;</div>
+  </div>
+
+  <div class="ev-card">
+    <div class="ev-num">06</div>
+    <div class="ev-title">Bioethanol Yield Uplift</div>
+    <div class="ev-icon"><span style="color:#2ABCC8;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 3h18v18H3zM9 9h6v6H9z"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>Ethanol (conventional)</span><span class="ev-val ev-neg">~72 L/T cane</span></div>
+      <div class="ev-row"><span>Ethanol (iBioStim&trade;)</span><span class="ev-val" style="color:#2ABCC8">~98 L/T cane</span></div>
+      <div class="ev-row"><span>Uplift</span><span class="ev-val" style="color:#2ABCC8">+26 L/T cane (+36%)</span></div>
+      <div class="ev-row"><span>At 70 T/ha harvest</span><span class="ev-val" style="color:#2ABCC8">+1,820 L/ha extra</span></div>
+    </div>
+    <div class="ev-arrow">Ethanol adds revenue &#8595;</div>
+  </div>
+
+  <div class="ev-card">
+    <div class="ev-num">07</div>
+    <div class="ev-title">Bagasse Cogeneration</div>
+    <div class="ev-icon"><span style="color:#2ABCC8;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>Bagasse per T cane</span><span class="ev-val" style="color:#2ABCC8">~280&ndash;300 kg (28&ndash;30%)</span></div>
+      <div class="ev-row"><span>Power per T cane</span><span class="ev-val" style="color:#2ABCC8">~150&ndash;200 kWh</span></div>
+      <div class="ev-row"><span>At 70 T/ha (10,000 ha)</span><span class="ev-val" style="color:#2ABCC8">~105&ndash;140 GWh/yr</span></div>
+      <div class="ev-row"><span>Continuous capacity</span><span class="ev-val" style="color:#2ABCC8">~12&ndash;16 MW</span></div>
+    </div>
+    <div class="ev-arrow">Bagasse powers grid &#8595;</div>
+  </div>
+
+  <div class="ev-card ev-card--perpetual">
+    <div class="ev-num" style="color:#C4A84A">08</div>
+    <div class="ev-title">Perpetual Cycle</div>
+    <div class="ev-icon"><span style="color:#C4A84A;display:flex;align-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span></div>
+    <div class="ev-data">
+      <div class="ev-row"><span>Filter cake return</span><span class="ev-val" style="color:#52B87A">Soil amendment &middot; each ratoon</span></div>
+      <div class="ev-row"><span>Synthetic residues</span><span class="ev-val" style="color:#52B87A">Zero across all cycles</span></div>
+      <div class="ev-row"><span>Cycle-over-cycle</span><span class="ev-val" style="color:#C4A84A">Stronger soil baseline</span></div>
+      <div class="ev-row"><span>Revenue gap</span><span class="ev-val" style="color:#C4A84A">None &mdash; ratoon continuity</span></div>
+    </div>
+    <div class="ev-arrow" style="color:#C4A84A">&#8635; Loops back to Step 1</div>
+  </div>
+
+</div>
+
+<!-- Chain summary bar -->
+<div class="fu d3" style="margin-top:48px;padding:28px 36px;background:rgba(10,25,14,0.8);border:1px solid rgba(42,138,72,0.15);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center">
+  <span style="color:#52B87A">iBioStim&trade; Applied</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#52B87A">C4 Pathway Activated</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#52B87A">+6g/100g Sucrose</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#C4A84A">CCS 8&ndash;9% &rarr; 15%</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#C4A84A">+44% Sugar/T Cane (Nominal)</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#C4A84A">ICUMSA 45 Access</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#2ABCC8">+26L Ethanol/T Cane</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#2ABCC8">140 GWh/yr Bagasse Power</span><span style="color:#8AB090;padding:0 8px">&rarr;</span>
+  <span style="color:#C4A84A">&#8635; Perpetual</span>
+</div>
+
+</div>
+</section>
+
+<!-- ═══ SECTION 03 — DOWNSTREAM PROCESSING ═══ -->
+<section id="downstream" style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.1);background:linear-gradient(180deg,rgba(4,8,20,0.4) 0%,transparent 50%)">
+<div class="si">
+<div class="sl fu">03 &mdash; From Field to Mill &mdash; What Every Tonne of Cane Produces</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">Every Tonne of Cane<br>Splits into <em>Five Outputs.</em></h2>
+<p style="margin-top:18px;font-size:13px;" class="fu d2">The iBioStim&trade; protocol amplifies the primary output (sugar) by +33% while preserving the co-product streams. The whole chain compounds from a single sucrose intervention.</p>
+
+<div style="margin-top:36px">
+<div class="step-r fu d2">
+  <div class="step-dot">01</div>
+  <div><h4>Raw &amp; White Sugar</h4>
+  <div class="solve">&rarr; +4g/100g uplift (nominal) &middot; +44% yield/T cane &middot; ICUMSA 45 access</div></div>
+</div>
+<div class="step-r fu d3">
+  <div class="step-dot">02</div>
+  <div><h4>Molasses</h4>
+  <div class="solve">&rarr; ~40&ndash;50 kg/T cane &middot; fermentation feedstock &middot; animal feed &middot; MSG</div></div>
+</div>
+<div class="step-r fu d4">
+  <div class="step-dot">03</div>
+  <div><h4>Bagasse</h4>
+  <div class="solve">&rarr; 280&ndash;300 kg/T cane &middot; boiler fuel &middot; cogeneration &middot; pulp &amp; board</div></div>
+</div>
+<div class="step-r fu">
+  <div class="step-dot" style="border-color:rgba(0,180,190,0.35);color:#2ABCC8">04</div>
+  <div><h4>Bioethanol (direct fermentation)</h4>
+  <div class="solve" style="color:#2ABCC8">&rarr; ~98 L/T cane with iBioStim&trade; &middot; vs ~72 L/T conventional</div></div>
+</div>
+<div class="step-r fu" style="border-bottom:none">
+  <div class="step-dot" style="border-color:rgba(196,168,74,0.35);color:#C4A84A">05</div>
+  <div><h4>Filter Cake (Press Mud)</h4>
+  <div class="solve" style="color:#C4A84A">&rarr; 30&ndash;40 kg/T cane &middot; organic soil amendment &middot; closes the cycle</div></div>
+</div>
+</div>
+</div>
+
+<div class="fu d2">
+<div class="proto-box" style="border-color:rgba(42,138,72,0.22)">
+  <div class="proto-title">Mill Output Per Tonne of Fresh Cane</div>
+  <div class="proto-row"><span>Juice extracted</span><span class="proto-val">~700&ndash;750 kg (70&ndash;75%)</span></div>
+  <div class="proto-row"><span>Sugar (conventional)</span><span class="proto-val" style="color:#7AAA82">~90 kg (9%)</span></div>
+  <div class="proto-row"><span>Sugar (iBioStim&trade;)</span><span class="proto-val">~130 kg (+4g nominal) +44%</span></div>
+  <div class="proto-row"><span>Molasses</span><span class="proto-val">~40&ndash;50 kg (4&ndash;5%)</span></div>
+  <div class="proto-row"><span>Bagasse</span><span class="proto-val">~280&ndash;300 kg (28&ndash;30%)</span></div>
+  <div class="proto-row"><span>Filter cake</span><span class="proto-val">~30&ndash;40 kg (3&ndash;4%)</span></div>
+  <div class="proto-row"><span>Bioethanol (conventional)</span><span class="proto-val" style="color:#7AAA82">~72 L</span></div>
+  <div class="proto-row"><span>Bioethanol (iBioStim&trade;)</span><span class="proto-val">~98 L (+26 L)</span></div>
+</div>
+
+<div style="margin-top:16px;background:rgba(42,138,72,0.04);border:1px solid rgba(42,138,72,0.14);padding:28px">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:18px">iBioStim&trade; Protocol &middot; Effect on Mill Outputs &middot; 70 T/ha Harvest Basis</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div style="text-align:center;padding:18px 12px;background:rgba(42,138,72,0.06)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#52B87A;line-height:1">+4.2T</div>
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7AAA82;margin-top:6px">Extra sugar / ha</div>
+    </div>
+    <div style="text-align:center;padding:18px 12px;background:rgba(42,138,72,0.06)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#C4A84A;line-height:1">+44%</div>
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7AAA82;margin-top:6px">Sugar yield / T cane (nominal)</div>
+    </div>
+    <div style="text-align:center;padding:18px 12px;background:rgba(0,100,110,0.08)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#2ABCC8;line-height:1">+1,820L</div>
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7AAA82;margin-top:6px">Extra ethanol / ha</div>
+    </div>
+    <div style="text-align:center;padding:18px 12px;background:rgba(0,100,110,0.08)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#2ABCC8;line-height:1">+36%</div>
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7AAA82;margin-top:6px">Ethanol yield / T cane</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══ SECTION 04 — BIOETHANOL CHAIN ═══ -->
+<section id="bioethanol" style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.1);background:linear-gradient(180deg,rgba(0,10,12,0.5) 0%,transparent 50%)">
+<div class="si">
+<div class="sl fu" style="color:#2ABCC8">04 &mdash; Molasses &rarr; Fermentation &rarr; Bioethanol &rarr; Blended Fuel</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">The Industry Burns the<br><em>Bagasse. We Distil</em><br>the Molasses.</h2>
+<p style="margin-top:18px;font-size:13px;" class="fu d2">Higher sucrose density means more fermentable substrate per tonne of cane. The +4g/100g nominal uplift translates directly into approximately +26 additional litres of bioethanol per tonne &mdash; a 36% ethanol yield improvement from identical cane volume, with no change to harvesting, transport, or mill infrastructure.</p>
+
+<div style="margin-top:36px">
+<div class="step-r fu d2" style="border-bottom-color:rgba(0,180,190,0.12)">
+  <div class="step-dot" style="border-color:rgba(0,180,190,0.3);color:#2ABCC8">01</div>
+  <div><h4>Sucrose &rarr; Fermentable Substrate</h4>
+  <div class="solve" style="color:#2ABCC8">&rarr; +4g/100g nominal uplift = +40 kg fermentable sucrose / T cane</div></div>
+</div>
+<div class="step-r fu d3" style="border-bottom-color:rgba(0,180,190,0.12)">
+  <div class="step-dot" style="border-color:rgba(0,180,190,0.3);color:#2ABCC8">02</div>
+  <div><h4>Fermentation &amp; Distillation</h4>
+  <div class="solve" style="color:#2ABCC8">&rarr; ~0.65 L ethanol per kg sucrose &middot; 40 kg &times; 0.65 = +26 L/T nominal</div></div>
+</div>
+<div class="step-r fu d4" style="border-bottom-color:rgba(0,180,190,0.12)">
+  <div class="step-dot" style="border-color:rgba(0,180,190,0.3);color:#2ABCC8">03</div>
+  <div><h4>Dehydrated Fuel-Grade Ethanol</h4>
+  <div class="solve" style="color:#2ABCC8">&rarr; E10&ndash;E25 blending mandates &middot; aviation biofuel eligible &middot; premium pricing</div></div>
+</div>
+<div class="step-r fu" style="border-bottom:none">
+  <div class="step-dot" style="border-color:rgba(0,180,190,0.3);color:#2ABCC8">04</div>
+  <div><h4>Vinasse Return to Field</h4>
+  <div class="solve" style="color:#2ABCC8">&rarr; Fertirrigation &middot; potassium-rich &middot; closes organic cycle &middot; zero waste</div></div>
+</div>
+</div>
+</div>
+
+<div class="fu d2">
+<div class="proto-box" style="border-color:rgba(0,180,190,0.22)">
+  <div class="proto-title" style="color:#2ABCC8">Bioethanol Yield Model &middot; iBioStim&trade; Protocol &middot; Per 10,000 ha</div>
+  <div class="proto-row"><span>Estimated cane harvest</span><span class="proto-val" style="color:#2ABCC8">~700,000 T/yr</span></div>
+  <div class="proto-row"><span>Sucrose uplift per T cane</span><span class="proto-val" style="color:#2ABCC8">+6g/100g (+60 kg/T)</span></div>
+  <div class="proto-row"><span>Additional fermentable sucrose</span><span class="proto-val" style="color:#2ABCC8">+28,000 T/yr (nominal)</span></div>
+  <div class="proto-row"><span>Ethanol yield (conventional)</span><span class="proto-val" style="color:#7AAA82">~72 L/T cane &middot; ~50.4M L/yr</span></div>
+  <div class="proto-row"><span>Ethanol yield (iBioStim&trade;)</span><span class="proto-val" style="color:#2ABCC8">~98 L/T cane &middot; ~68.6M L/yr</span></div>
+  <div class="proto-row"><span>Additional ethanol produced</span><span class="proto-val" style="color:#2ABCC8">+18.2M L/yr (+36%)</span></div>
+  <div class="proto-row"><span>At $0.55/L fuel ethanol</span><span class="proto-val" style="color:#2ABCC8">+$10.0M/yr incremental</span></div>
+  <div class="proto-row"><span>Vinasse from fermentation</span><span class="proto-val" style="color:#52B87A">Returned to field as fertirrigant</span></div>
+  <div class="proto-row"><span>Blending mandates access</span><span class="proto-val" style="color:#52B87A">E10&ndash;E25 &middot; SAF-eligible</span></div>
+</div>
+<div class="disc" style="margin-top:16px"><strong>iBioStim&trade; multiplier on ethanol</strong><br>+4g/100g sucrose (nominal) &rarr; +40 kg/T fermentable substrate &rarr; +26 L/T cane ethanol uplift. At 10,000 ha and 70 T/ha: additional 18.2 million litres of ethanol from identical cane volume, no new land, no new distillery capacity required.</div>
+
+<!-- side-by-side comparison -->
+<div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,180,190,0.1)">
+  <div style="background:#0D1F14;padding:24px 20px">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7AAA82;margin-bottom:16px">Conventional</div>
+    <div class="proto-row" style="border-bottom-color:rgba(255,255,255,0.06)"><span style="color:#7AAA82">Ethanol / T cane</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:#7AAA82">~72 L</span></div>
+    <div class="proto-row" style="border-bottom-color:rgba(255,255,255,0.06)"><span style="color:#7AAA82">10,000 ha annual</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:#7AAA82">~50.4M L</span></div>
+    <div class="proto-row" style="border-bottom:none"><span style="color:#7AAA82">Revenue @ $0.55/L</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:#7AAA82">~$27.7M/yr</span></div>
+    <div style="margin-top:16px;text-align:center;padding:14px;background:rgba(74,80,96,0.08)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#7A9A80;line-height:1">50.4M L</div>
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7A9A80;margin-top:6px">per year</div>
+    </div>
+  </div>
+  <div style="background:rgba(0,16,18,0.95);padding:24px 20px;border:1px solid rgba(0,180,190,0.18)">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#2ABCC8;margin-bottom:16px">iBioStim&trade; Protocol</div>
+    <div class="proto-row" style="border-bottom-color:rgba(0,180,190,0.1)"><span>Ethanol / T cane</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:#2ABCC8">~98 L <em style="font-size:10px;color:#2ABCC8">+36%</em></span></div>
+    <div class="proto-row" style="border-bottom-color:rgba(0,180,190,0.1)"><span>10,000 ha annual</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:#2ABCC8">~68.6M L</span></div>
+    <div class="proto-row" style="border-bottom:none"><span>Revenue @ $0.55/L</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:#2ABCC8">~$37.7M/yr</span></div>
+    <div style="margin-top:16px;text-align:center;padding:14px;background:rgba(0,100,110,0.1);border:1px solid rgba(0,180,190,0.2)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#2ABCC8;line-height:1">68.6M L</div>
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#2ABCC8;margin-top:6px">per year</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══ SECTION 05 — PILOT PROTOCOL ═══ -->
+<section id="pilot" style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.1)">
+<div class="si">
+<div class="sl fu">05 &mdash; No-Regret Pilot Framework</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">Performance Verified<br>Before <em>Capital Commitment.</em></h2>
+<p style="margin-top:18px;font-size:13px;" class="fu d2">Brix readings begin within weeks. CCS uplift is confirmed at first mill delivery. Bioethanol yield is measurable on the same harvest. The evidence chain closes before full-scale commitment is made.</p>
+<div style="margin-top:32px">
+<div class="step-r fu d3"><div class="step-dot">01</div><div><h4>Pilot Deployment</h4><p style="font-size:12.5px;line-height:1.75">Apply Mr Carbon + Junior Plus twice monthly across minimum 50 ha. Brix readings taken fortnightly. First signal within 2&ndash;4 weeks.</p></div></div>
+<div class="step-r fu d4"><div class="step-dot">02</div><div><h4>CCS &amp; Ethanol Calibration</h4><p style="font-size:12.5px;line-height:1.75">Mill delivers CCS uplift data at first harvest. Ethanol yield confirmed at distillery. Revenue model validated against first-principles field data.</p></div></div>
+<div class="step-r fu"><div class="step-dot">03</div><div><h4>Full-Scale Capital Commitment</h4><p style="font-size:12.5px;line-height:1.75">Protocol success rate 100% (SOP compliant). Expansion proceeds with verified uplift data specific to the estate's own cane genetics and soil.</p></div></div>
+</div></div>
+<div class="fu d2">
+<div class="proto-box">
+<div class="proto-title">iBioStim&trade; Sugarcane Protocol Specification</div>
+<div class="proto-row"><span>Minimum pilot area</span><span class="proto-val">50 ha</span></div>
+<div class="proto-row"><span>Primary formulations</span><span class="proto-val">Mr Carbon &middot; Junior Plus</span></div>
+<div class="proto-row"><span>Application frequency</span><span class="proto-val">Twice monthly</span></div>
+<div class="proto-row"><span>First Brix signal</span><span class="proto-val">2&ndash;4 weeks</span></div>
+<div class="proto-row"><span>Biochemical response</span><span class="proto-val">24&ndash;72 hours</span></div>
+<div class="proto-row"><span>CCS confirmation</span><span class="proto-val">First mill delivery</span></div>
+<div class="proto-row"><span>Sucrose uplift</span><span class="proto-val">+4g/100g nominal</span></div>
+<div class="proto-row"><span>Ethanol uplift</span><span class="proto-val">+26 L/T cane (+36%)</span></div>
+<div class="proto-row"><span>Harvest security</span><span class="proto-val">100% (drought-resilient)</span></div>
+<div class="proto-row"><span>Synthetic inputs</span><span class="proto-val">Zero</span></div>
+<div class="proto-row"><span>Protocol success rate</span><span class="proto-val">100% (SOP compliant)</span></div>
+</div>
+<div class="disc"><strong>Disclaimer</strong><br>Protocols applicable only to the iBioStim&trade; regime. Any attempt to mimic performance using other products may harm plants. No living insects or organisms destroyed. All ingredients derived from nature. Preservatives and Plant Growth Regulators free.</div>
+</div></div>
+</div>
+</section>
+
+<!-- ═══ SECTION 06 — FULL VALUE CHAIN WRAP ═══ -->
+<section id="valuechain" style="padding:140px 0;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,0.06)">
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 80%,rgba(74,160,100,0.06) 0%,transparent 65%),radial-gradient(ellipse 50% 40% at 80% 20%,rgba(42,188,200,0.04) 0%,transparent 60%);pointer-events:none"></div>
+
+<div class="si" style="position:relative;z-index:1">
+  <div class="sl fu">06 &mdash; iBioStim&trade; Protocol &middot; Full Sugarcane Value Chain Contribution</div>
+  <div style="text-align:center;margin-bottom:80px">
+    <h2 class="fu d1" style="text-align:center">One Protocol.<br><em>Every Stage.</em></h2>
+    <p class="fu d2" style="max-width:600px;margin:22px auto 0;font-size:14px">The iBioStim&trade; protocol is not an input. It is the biochemical engine that determines the output of every stage from the soil beneath the roots to the ethanol tanker at the distillery gate. This is where each intervention lands &mdash; quantitatively.</p>
+  </div>
+
+  <div class="vc-wrap fu d2">
+
+    <!-- NODE 1 -->
+    <div class="vcw-row">
+      <div class="vcw-card vcw-card--green">
+        <div class="vcw-stage">Soil &amp; Root Zone</div>
+        <div class="vcw-role">iBioStim&trade; formulations act directly on soil biology and rhizosphere enzyme activity, lowering the activation energy for nutrient uptake and organic matter mineralisation. Zero synthetic inputs preserve microbial diversity. Filter cake returned from the distillery closes the organic loop. The soil baseline strengthens with each ratoon cycle rather than degrading.</div>
+        <div class="vcw-tag vcw-tag--green">Zero synthetic inputs &middot; Soil biology enhanced &middot; Filter cake return closes cycle &middot; 100% protocol success</div>
+      </div>
+      <div class="vcw-connector vcw-connector--green"></div>
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#52B87A">24<span style="font-size:18px">hr</span></div>
+        <div class="vcw-m-lbl">Biochemical Response</div>
+        <div class="vcw-m-sub">C4 pathway activation</div>
+      </div>
+    </div>
+    <div class="vcw-arrow vcw-arrow--green">&#8595;</div>
+
+    <!-- NODE 2 -->
+    <div class="vcw-row vcw-row--rev">
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#52B87A">+4<span style="font-size:18px">g</span></div>
+        <div class="vcw-m-lbl">Sucrose / 100g</div>
+        <div class="vcw-m-sub">14&ndash;17 vs 10&ndash;13 baseline</div>
+      </div>
+      <div class="vcw-connector vcw-connector--green"></div>
+      <div class="vcw-card vcw-card--green">
+        <div class="vcw-stage">Sugarcane Stalk &mdash; C4 Photosynthesis</div>
+        <div class="vcw-role">The Hatch-Slack C4 pathway concentrates CO&#8322; at the RuBisCO enzyme, maximising sucrose synthesis per unit of light and water. iBioStim&trade; optimises the cofactors this pathway depends on &mdash; driving sucrose accumulation from ~9 g/100g (conventional) to ~13 g/100g on a nominal basis. Elevated dry matter also maintains this density through dry season events that typically dilute competitor crops. Brix is measurable in-field within 2&ndash;4 weeks of first application.</div>
+        <div class="vcw-tag vcw-tag--green">Brix signal &lt;4 weeks &middot; +4g/100g sucrose (nominal) &middot; Dry season CCS secured &middot; 100% harvest certainty</div>
+      </div>
+    </div>
+    <div class="vcw-arrow vcw-arrow--green">&#8595;</div>
+
+    <!-- NODE 3 -->
+    <div class="vcw-row">
+      <div class="vcw-card vcw-card--green">
+        <div class="vcw-stage">Harvest &amp; CCS Assessment</div>
+        <div class="vcw-role">Commercial Cane Sugar (CCS) is the mill's pricing mechanism &mdash; every CCS unit above the base price earns a premium. The sucrose uplift translates to a CCS of 15 — versus the conventional 8&ndash;9 CCS — at harvest. At a typical mill premium of $1.50&ndash;$2.50 per CCS unit per tonne of cane, this is a directly quantifiable and recurring revenue uplift that is visible from the first harvest delivery. Weather-independent harvest timing eliminates forced early cuts and the CCS penalties they carry.</div>
+        <div class="vcw-tag vcw-tag--green">CCS 15 vs 8&ndash;9 baseline &middot; +6&ndash;7 units &middot; Weather-independent harvest &middot; No forced early cuts</div>
+      </div>
+      <div class="vcw-connector vcw-connector--green"></div>
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#52B87A">15<span style="font-size:18px">CCS</span></div>
+        <div class="vcw-m-lbl">CCS Consistently Delivered</div>
+        <div class="vcw-m-sub">vs 8&ndash;9 CCS conventional</div>
+      </div>
+    </div>
+    <div class="vcw-arrow vcw-arrow--gold">&#8595;</div>
+
+    <!-- NODE 4 -->
+    <div class="vcw-row vcw-row--rev">
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#C4A84A">+44<span style="font-size:18px">%</span></div>
+        <div class="vcw-m-lbl">Sugar Yield / T Cane</div>
+        <div class="vcw-m-sub">~130 kg vs ~90 kg (nominal)</div>
+      </div>
+      <div class="vcw-connector vcw-connector--gold"></div>
+      <div class="vcw-card vcw-card--gold">
+        <div class="vcw-stage">Mill &amp; Crushing &mdash; Sugar Recovery</div>
+        <div class="vcw-role">Higher sucrose density improves juice purity (lower non-sucrose impurities relative to sugar content), accelerating clarification and reducing lime and flocculant consumption. Recovery rate rises from a typical 85&ndash;88% to 89&ndash;92%. Combined, the +4g/100g nominal uplift and improved recovery deliver approximately 130 kg of sugar per tonne of cane versus the conventional 90 kg &mdash; a +44% sugar yield improvement from the same cane volume. No additional mill infrastructure is required.</div>
+        <div class="vcw-tag vcw-tag--gold">Sugar yield ~130 vs 90 kg/T (+44% nominal) &middot; Recovery rate 89&ndash;92% &middot; Faster clarification &middot; Lower reagent cost</div>
+      </div>
+    </div>
+    <div class="vcw-arrow vcw-arrow--gold">&#8595;</div>
+
+    <!-- NODE 5 -->
+    <div class="vcw-row">
+      <div class="vcw-card vcw-card--gold">
+        <div class="vcw-stage">Refinery &mdash; Sugar Grade &amp; Market Access</div>
+        <div class="vcw-role">Higher purity juice produces higher-quality raw sugar, as measured by ICUMSA colour value. Conventional cane typically yields raw sugar at ICUMSA 600&ndash;1200 (brown to amber grades). iBioStim&trade;-treated cane, with its elevated sucrose-to-impurity ratio and non-detect synthetic residues, produces juice capable of ICUMSA 45 white sugar refining &mdash; unlocking premium retail, food-service, and pharmaceutical supply chains. Zero residues simultaneously satisfy EU food law standards and ESG-linked supply chain requirements, enabling access to green bond financing.</div>
+        <div class="vcw-tag vcw-tag--gold">ICUMSA 45 white sugar access &middot; Pharmaceutical grade eligible &middot; EU food law compliant &middot; ESG-linked financing</div>
+      </div>
+      <div class="vcw-connector vcw-connector--gold"></div>
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#C4A84A">45<span style="font-size:18px">ICUMSA</span></div>
+        <div class="vcw-m-lbl">White Sugar Grade</div>
+        <div class="vcw-m-sub">vs ICUMSA 600&ndash;1200 raw</div>
+      </div>
+    </div>
+    <div class="vcw-arrow vcw-arrow--teal">&#8595;</div>
+
+    <!-- NODE 6 -->
+    <div class="vcw-row vcw-row--rev">
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#2ABCC8">+26<span style="font-size:18px">L/T</span></div>
+        <div class="vcw-m-lbl">Extra Ethanol / T Cane</div>
+        <div class="vcw-m-sub">~98 vs ~72 L/T conventional</div>
+      </div>
+      <div class="vcw-connector vcw-connector--teal"></div>
+      <div class="vcw-card vcw-card--teal">
+        <div class="vcw-stage">Molasses &rarr; Fermentation &rarr; Bioethanol</div>
+        <div class="vcw-role">Every gram of sucrose above the conventional baseline is additional fermentable substrate. The +4g/100g nominal uplift adds ~40 kg of fermentable sucrose per tonne of cane, which at 0.65 L ethanol per kg yields approximately +26 additional litres of fuel-grade ethanol per tonne. At 10,000 ha and 70 T/ha harvest, this is approximately +18.2 million additional litres of bioethanol per year &mdash; from no new land, no new distillery capacity, no new logistics. The vinasse co-product is returned to the field as potassium-rich fertirrigant, closing the organic cycle and reducing synthetic fertiliser dependency further.</div>
+        <div class="vcw-tag vcw-tag--teal">+26 L/T cane &middot; +18.2M L/yr (10,000 ha) &middot; E10&ndash;E25 blending &middot; SAF-eligible &middot; Vinasse fertirrigant return</div>
+      </div>
+    </div>
+    <div class="vcw-arrow vcw-arrow--teal">&#8595;</div>
+
+    <!-- NODE 7 -->
+    <div class="vcw-row">
+      <div class="vcw-card vcw-card--teal">
+        <div class="vcw-stage">Bagasse &rarr; Cogeneration &rarr; Grid Power</div>
+        <div class="vcw-role">Bagasse constitutes 28&ndash;30% of cane by weight &mdash; approximately 280&ndash;300 kg per tonne of cane, regardless of sucrose content. Combusted in a boiler coupled to a steam turbine generator, bagasse produces ~150&ndash;200 kWh per tonne of cane processed. At 10,000 ha and 70 T/ha, the mill processes 700,000 T of cane per year, yielding 196,000 T of bagasse and generating approximately 105&ndash;140 GWh of electricity annually &mdash; a continuous capacity of 12&ndash;16 MW available every milling day. Surplus power beyond mill self-consumption is exported to the grid or sold under renewable energy purchase agreements, generating a fourth revenue stream from the same land.</div>
+        <div class="vcw-tag vcw-tag--teal">196,000 T bagasse/yr (10,000 ha) &middot; 105&ndash;140 GWh/yr &middot; 12&ndash;16 MW continuous &middot; Grid export eligible</div>
+      </div>
+      <div class="vcw-connector vcw-connector--teal"></div>
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#2ABCC8">140<span style="font-size:18px">GWh</span></div>
+        <div class="vcw-m-lbl">Annual Cogeneration</div>
+        <div class="vcw-m-sub">10,000 ha upper bound</div>
+      </div>
+    </div>
+    <div class="vcw-arrow vcw-arrow--blue">&#8595;</div>
+
+    <!-- NODE 8 -->
+    <div class="vcw-row vcw-row--rev">
+      <div class="vcw-metric">
+        <div class="vcw-m-val" style="color:#5A9AE8">16<span style="font-size:18px">MW</span></div>
+        <div class="vcw-m-lbl">Continuous Power</div>
+        <div class="vcw-m-sub">per 10,000 ha plantation</div>
+      </div>
+      <div class="vcw-connector vcw-connector--blue"></div>
+      <div class="vcw-card vcw-card--blue">
+        <div class="vcw-stage">Grid Export &amp; Premium Market Access</div>
+        <div class="vcw-role">Bagasse cogeneration electricity is classified as biomass renewable under IRENA, IEA, and most national REC frameworks. Grid export under a power purchase agreement (PPA) generates a fourth recurring revenue stream &mdash; alongside sugar, ethanol, and carbon credits. At 140 GWh/yr and a conservative $0.08/kWh tariff, this adds $11.2M/yr to the plantation P&amp;L from co-product energy alone. Zero synthetic residues across the supply chain simultaneously qualifies the operation for EU sustainability certification (RED II), green bond issuance, and ESG-linked trade finance at reduced cost of capital.</div>
+        <div class="vcw-tag vcw-tag--blue">~$11.2M/yr grid export (10,000 ha) &middot; Biomass REC certified &middot; RED II compliant &middot; ESG green bond eligible</div>
+      </div>
+    </div>
+
+  </div><!-- end vc-wrap -->
+
+  <!-- Cogeneration scale table -->
+  <div class="fu d3" style="margin-top:80px">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#2ABCC8;margin-bottom:20px">Bagasse Cogeneration Power Output &mdash; Scale Table &middot; iBioStim&trade; Protocol &middot; 70 T/ha Harvest</div>
+  <table class="data-tbl" style="border-color:rgba(0,180,190,0.15)">
+  <thead><tr>
+    <th style="background:rgba(0,100,110,0.08);color:#2ABCC8">Scale</th>
+    <th style="background:rgba(0,100,110,0.08);color:#2ABCC8">Cane / yr</th>
+    <th style="background:rgba(0,100,110,0.08);color:#2ABCC8">Bagasse / yr</th>
+    <th style="background:rgba(0,100,110,0.08);color:#2ABCC8">Power Generated</th>
+    <th style="background:rgba(0,100,110,0.08);color:#2ABCC8">Continuous MW</th>
+    <th style="background:rgba(0,100,110,0.08);color:#2ABCC8">Revenue @ $0.08/kWh</th>
+  </tr></thead>
+  <tbody>
+  <tr><td>1,000 ha</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">70,000 T</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">~19,600 T</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:12px">10.5&ndash;14 GWh</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:12px">~1.2&ndash;1.6 MW</td><td style="color:#52B87A;font-family:'DM Mono',monospace;font-size:12px">~$1.1M/yr</td></tr>
+  <tr><td>5,000 ha</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">350,000 T</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">~98,000 T</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:12px">52.5&ndash;70 GWh</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:12px">~6&ndash;8 MW</td><td style="color:#52B87A;font-family:'DM Mono',monospace;font-size:12px">~$5.6M/yr</td></tr>
+  <tr><td style="color:#E8F0E8">10,000 ha</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">700,000 T</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">~196,000 T</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:13px;font-weight:500">105&ndash;140 GWh</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:13px;font-weight:500">~12&ndash;16 MW</td><td style="color:#52B87A;font-family:'DM Mono',monospace;font-size:13px;font-weight:500">~$11.2M/yr</td></tr>
+  <tr><td>50,000 ha</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">3.5M T</td><td style="color:#7AAA82;font-family:'DM Mono',monospace;font-size:12px">~980,000 T</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:12px">525&ndash;700 GWh</td><td style="color:#2ABCC8;font-family:'DM Mono',monospace;font-size:12px">~60&ndash;80 MW</td><td style="color:#52B87A;font-family:'DM Mono',monospace;font-size:12px">~$56M/yr</td></tr>
+  </tbody></table>
+  <div class="disc" style="margin-top:12px"><strong>How to read this table</strong><br>All rows use 70 T cane/ha/yr, bagasse at 28% of cane weight, 150&ndash;200 kWh generated per T cane processed, and grid export at $0.08/kWh. Revenue column reflects grid export revenue only &mdash; mill self-consumption power savings are additive and not included.</div>
+  </div>
+
+  <!-- Closing summary bar -->
+  <div class="fu d3" style="margin-top:80px;border:1px solid rgba(74,160,100,0.12);background:#0E1C12;padding:48px 52px;display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;gap:0;align-items:center">
+    <div style="padding:0 40px 0 0;text-align:center">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:16px">Upstream</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#E8F0E8;line-height:1.1">Soil &rarr; Stalk &rarr; CCS</div>
+      <p style="font-size:12px;margin-top:12px;color:#7AAA82;line-height:1.7">The iBioStim&trade; protocol acts on soil biology and the Hatch-Slack C4 pathway &mdash; delivering a nominal +4g/100g sucrose uplift above baseline and elevating CCS from 8&ndash;9 to a consistent 15. This single intervention determines every quality and yield metric visible at the mill gate.</p>
+    </div>
+    <div style="width:1px;height:100%;background:rgba(255,255,255,0.07);align-self:stretch"></div>
+    <div style="padding:0 40px;text-align:center">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#C4A84A;margin-bottom:16px">Midstream</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#E8F0E8;line-height:1.1">Mill &rarr; Sugar &rarr; Ethanol</div>
+      <p style="font-size:12px;margin-top:12px;color:#7AAA82;line-height:1.7">+44% more sugar per tonne of cane (nominal). ICUMSA 45 white sugar access. +36% more bioethanol from the same fermentation infrastructure. Every midstream metric is a direct arithmetic consequence of the upstream sucrose uplift.</p>
+    </div>
+    <div style="width:1px;height:100%;background:rgba(255,255,255,0.07);align-self:stretch"></div>
+    <div style="padding:0 0 0 40px;text-align:center">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#2ABCC8;margin-bottom:16px">Downstream</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#E8F0E8;line-height:1.1">Bagasse &rarr; Power &rarr; Grid</div>
+      <p style="font-size:12px;margin-top:12px;color:#7AAA82;line-height:1.7">140 GWh/yr of renewable baseload electricity from bagasse cogeneration at 10,000 ha scale. ESG-certified. Grid export revenue adds a fourth recurring income stream alongside sugar, ethanol, and carbon credits.</p>
+    </div>
+  </div>
+
+  <!-- CTA row -->
+  <div class="fu d4" style="margin-top:64px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#52B87A;display:flex;align-items:center;gap:16px">
+      <span style="width:36px;height:1px;background:#2A8A48;display:block"></span>
+      Sugarcane &middot; iBioStim&trade; Protocol &middot; Soil to Grid
+      <span style="width:36px;height:1px;background:#2A8A48;display:block"></span>
+    </div>
+    <h2 style="max-width:700px">Your Plantation Is the<br><em>Beginning of the Chain.</em></h2>
+    <p style="max-width:500px;font-size:13px">The iBioStim&trade; protocol is the only intervention that moves every stage of the sugarcane chain simultaneously &mdash; from sucrose density to CCS to refinery grade to bioethanol yield to cogeneration power.</p>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta" style="padding:140px 0;text-align:center;position:relative;overflow:hidden">
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(74,160,100,0.06) 0%,transparent 70%);pointer-events:none"></div>
+<div class="si" style="position:relative;z-index:1">
+<div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#52B87A;display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px">
+<span style="width:36px;height:1px;background:#2A8A48;display:block"></span>Sugarcane &middot; Asset 03 &middot; Off-Market Only<span style="width:36px;height:1px;background:#2A8A48;display:block"></span></div>
+<h2 style="text-align:center;margin:0 auto 20px;max-width:740px">The Unsaid Asset.<br><em>Now Fully Realised.</em></h2>
+<p style="max-width:520px;margin:0 auto 44px;font-size:14px;text-align:center">Qualified title holders and funds with sugarcane land in ASEAN, LATAM, or Sub-Saharan Africa are invited for a confidential strategic briefing. Engagements proceed by qualified introduction only.</p>
+<div style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap">
+<a href="/cdn-cgi/l/email-protection#d4bdbaa5a1bda6ad94bdb6bdbba7a0bdb9fab7bbb9" class="btn-prim" style="background:#2A8A48">Request Private Briefing</a>
+<a href="rice.html" class="btn-ghost">Next: Rice Asset &rarr;</a>
+</div></div></section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+<div class="ftr"><div class="ftr-grid">
+<div class="ftr-brand"><a href="ibiostim-redesign.html" class="ftr-logo">iBioStim<span>&#8482;</span></a>
+<p>The biological intelligence layer that converts agricultural land into institutional-grade, asset-backed returns. A Product of Singapore.</p>
+<div class="ftr-mas"><div class="ftr-dot"></div>J2Co Pte. Ltd. &middot; 202021073D &middot; Institutional access to MAS-registered fund platforms via the 宝盛 Protocol</div>
+<p style="margin-top:9px;font-size:10px;color:#7AAA82">8 Burn Road 15-13 Trivex, Singapore 369977</p></div>
+<div class="ftr-col"><h5>The Platform</h5>
+<a href="platform.html">$1.4T Safe Haven Fund</a><a href="platform.html#thesis">ABS Thesis</a>
+<a href="platform.html#convergences">Three Convergences</a><a href="platform.html#safehaven">Singapore MAS</a>
+<a href="platform.html#exclusive">Exclusive Access</a></div>
+<div class="ftr-col"><h5>Asset Series</h5>
+<a href="oilpalm.html">Oil Palm &middot; Asset 01</a><a href="chilli.html">Chilli &middot; Asset 02</a>
+<a href="sugarcane.html">Sugarcane &middot; Asset 03</a><a href="rice.html">Rice &middot; Asset 04</a>
+<a href="freshproduce.html">Fresh Produce &middot; Asset 05</a><a href="coffee.html">Coffee &middot; Asset 06</a>
+<a href="banana.html">Banana &middot; Asset 07</a><a href="sweetpotato.html">Sweet Potato &middot; Asset 08</a></div>
+<div class="ftr-col"><h5>Institutional</h5>
+<a href="#">Publications &amp; Data</a><a href="#">Third-Party Audits</a>
+<a href="#">Responsibility</a><a href="#">Contact</a></div>
+</div>
+<div class="ftr-bot">
+<p class="ftr-copy">&copy; 2025 J2Co Pte. Ltd. (iBioStim&#8482;). Company Registration 202021073D. All protocols proprietary and trade-protected. For qualified institutional investors only.</p>
+<span class="ftr-tag">Just Better. Always.</span>
+</div></div></footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const _o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.08});
+document.querySelectorAll('.fu').forEach(el=>_o.observe(el));
+window.addEventListener('scroll',()=>{const n=document.querySelector('nav');n.style.background=window.scrollY>60?'rgba(13,31,20,0.99)':'rgba(13,31,20,0.97)'});
+</script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Produce — iBioStim™ Institutional Asset Series</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#0D1F14;color:#C8D8C8;font-family:'Montserrat',sans-serif;font-weight:300;font-size:15px;line-height:1.75;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.5}
+section{position:relative;z-index:1}
+.si{max-width:1280px;margin:0 auto;padding:0 60px}
+.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#B8993A;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.sl::after{content:'';display:block;flex:1;height:1px;background:linear-gradient(to right,rgba(74,160,100,0.2),transparent)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,56px);font-weight:300;line-height:1.08;color:#E8F0E8}
+h2 em{font-style:italic;color:#52B87A}
+h3{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2vw,26px);font-weight:300;color:#E8F0E8;line-height:1.2}
+p{font-weight:300;line-height:1.88;color:#C8D8C8}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fu.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.btn-prim{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:14px 40px;text-decoration:none;transition:all .25s;color:#fff}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#C8D8C8;text-decoration:none;transition:color .25s}
+.btn-ghost:hover{color:#52B87A}
+@media(max-width:1024px){.si{padding:0 24px}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(13,31,20,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,160,100,0.09)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.nav-logo span{color:#B8993A}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#7A9A80;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#52B87A}
+.nav-series{font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border:1px solid rgba(74,160,100,0.22);white-space:nowrap}
+.nav-plat{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#B8993A;padding:8px 14px;border:1px solid rgba(74,160,100,0.22);text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-plat:hover{background:#B8993A;color:#04050A}
+.nav-plat-dot{width:5px;height:5px;background:#B8993A;border-radius:50%;flex-shrink:0;animation:nav-pulse 2s ease-in-out infinite}
+.nav-cta{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#B8993A;border:1px solid rgba(74,160,100,0.22);padding:10px 18px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-cta:hover{background:#B8993A;color:#04050A}
+@keyframes nav-pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@media(max-width:1024px){nav{padding:16px 20px}.nav-links,.nav-series{display:none}}
+.mq{overflow:hidden;white-space:nowrap;position:relative;z-index:10;padding:12px 0}
+.mq-inner{display:inline-flex;animation:mq-run 40s linear infinite}
+@keyframes mq-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq-inner span{font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:0 40px}
+.mq-inner .sep{padding:0;font-size:8px}
+footer{background:#0A1A10;border-top:1px solid rgba(74,160,100,0.07);padding:52px 60px 32px}
+.ftr{max-width:1280px;margin:0 auto}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(74,160,100,0.07)}
+.ftr-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:.08em;color:#E8F0E8;text-decoration:none}
+.ftr-logo span{color:#B8993A}
+.ftr-brand p{font-size:11px;color:#7A9A80;margin-top:12px;line-height:1.8}
+.ftr-mas{margin-top:12px;display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:9px;color:#B8993A;letter-spacing:.12em}
+.ftr-dot{width:5px;height:5px;background:#B8993A;border-radius:50%;animation:nav-pulse 2s ease-in-out infinite;flex-shrink:0}
+.ftr-col h5{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B8993A;margin-bottom:14px}
+.ftr-col a{display:block;font-size:11.5px;color:#7A9A80;text-decoration:none;margin-bottom:8px;transition:color .2s}
+.ftr-col a:hover{color:#C8C2B4}
+.ftr-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-copy{font-size:10px;color:#7A9A80}
+.ftr-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#B8993A}
+@media(max-width:1024px){footer{padding:36px 20px 24px}.ftr-grid{grid-template-columns:1fr 1fr}.ftr-bot{justify-content:center;text-align:center}}
+
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 90px;position:relative;overflow:hidden}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7.5vw,112px);font-weight:300;line-height:.95;color:#fff}
+h1 em{font-style:italic;color:#52B87A}
+.hc{position:relative;z-index:2}
+.h-ey{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#52B87A;margin-bottom:28px;display:flex;align-items:center;gap:14px}
+.h-ey::before{content:'';width:32px;height:1px;background:#2A6B40;display:block}
+.h-sub{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.13em;color:#2A6B40;margin-top:16px}
+.h-bot{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:56px;padding-top:40px;border-top:1px solid rgba(74,160,100,0.15);align-items:end}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(74,160,100,0.12)}
+.kpi{background:rgba(13,31,20,0.93);padding:24px 18px;text-align:center}
+.kpi-v{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:#52B87A;line-height:1}
+.kpi-v sup{font-size:15px;color:#B8993A}
+.kpi-l{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#6A8A70;margin-top:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.hurdle{background:rgba(74,160,100,0.05);padding:24px 28px;border-left:3px solid transparent;transition:all .3s;margin-bottom:10px}
+.hurdle:hover{border-left-color:#52B87A;background:rgba(74,160,100,0.10)}
+.hurdle h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:#E8F0E8;margin-bottom:6px}
+.hurdle p{font-size:12.5px;line-height:1.75}
+.hurdle .solve{margin-top:8px;font-family:'DM Mono',monospace;font-size:10px;color:#52B87A}
+.data-tbl{border-collapse:collapse;width:100%;font-size:12.5px;border:1px solid rgba(74,160,100,0.2)}
+.data-tbl th{background:rgba(74,160,100,0.12);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#52B87A;padding:12px 16px;text-align:left}
+.data-tbl td{padding:12px 16px;border-bottom:1px solid rgba(74,160,100,0.08);color:#C8D8C8;vertical-align:top}
+.data-tbl tr:last-child td{border-bottom:none}
+.pos{color:#52B87A;font-family:'DM Mono',monospace;font-size:12px}
+.neg{color:#6A8A70;font-family:'DM Mono',monospace;font-size:12px}
+.proto-box{border:1px solid rgba(74,160,100,0.22);padding:36px}
+.proto-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#52B87A;margin-bottom:22px}
+.proto-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(74,160,100,0.10);font-size:12.5px}
+.proto-row:last-child{border-bottom:none}
+.proto-val{font-family:'DM Mono',monospace;font-size:12px;color:#B8993A}
+@media(max-width:1024px){#hero{padding:0 24px 80px}.h-bot,.two-col{grid-template-columns:1fr;gap:40px}.kpis{grid-template-columns:1fr 1fr}}</style>
+</head>
+<body>
+<nav>
+<a href="ibiostim-redesign.html" class="nav-logo">iBioStim<span>&#8482;</span></a>
+<div class="nav-links"><a href="#xfactor">The X-Factor</a></div>
+<span class="nav-series" style="color:#52B87A">Fresh Produce &middot; Asset 05</span>
+<a href="platform.html" class="nav-plat"><span class="nav-plat-dot"></span>$1.4T Platform</a>
+<a href="#cta" class="nav-cta">Request Briefing</a>
+</nav>
+<section id="hero">
+<div style="position:absolute;inset:0;z-index:0">
+<div style="position:absolute;inset:0;background:linear-gradient(158deg,rgba(13,31,20,0.2) 0%,rgba(13,31,20,0.65) 45%,rgba(13,31,20,0.98) 100%)"></div>
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse 65% 50% at 60% 28%,rgba(74,160,100,0.15) 0%,transparent 68%)"></div>
+</div>
+<div class="hc">
+<div class="h-ey">Fresh Produce &middot; Asset Series 05 &middot; The X-Factor No One Else Has</div>
+<h1>The <em>X-Factor</em><br>No One<br>Else Has</h1>
+<div class="h-sub">123% Flavonoid Uplift &middot; 40-Day Shelf Life &middot; 8.5% Brix &middot; 1.3&times; Nutrient Density vs Organic</div>
+<div class="h-bot">
+<div><p style="font-size:14px;line-height:1.9">The premium fresh produce market commands price premiums for one thing: <strong style="color:#fff">verifiably superior quality</strong>. A Germany blinded trial confirmed +123% flavonoid uplift. ISO 16679-certified 40-day shelf life vs the 7-day industry standard. 8.5% Brix versus 3.2% for fresh organic. 1.3&times; nutrient density versus certified organic. These are not claims &mdash; they are third-party certified differentiators that unlock pricing tiers unavailable to any conventional or organic producer.</p></div>
+<div class="kpis">
+<div class="kpi"><div class="kpi-v">123<sup>%</sup></div><div class="kpi-l">Flavonoid Uplift</div></div>
+<div class="kpi"><div class="kpi-v">40<sup>d</sup></div><div class="kpi-l">Shelf Life (ISO 16679)</div></div>
+<div class="kpi"><div class="kpi-v">1.3<sup>&times;</sup></div><div class="kpi-l">vs Fresh Organic</div></div>
+</div></div></div></section>
+<div class="mq" style="background:rgba(13,31,20,0.92);border-top:1px solid rgba(74,160,100,0.05);border-bottom:1px solid rgba(74,160,100,0.05)">
+<div class="mq-inner"><span style="color:rgba(82,184,122,0.88)">+123% Flavonoids (Germany Blinded)</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">40-Day Shelf Life (ISO 16679)</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">8.5% Brix vs 3.2% Organic</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">1.3&times; Nutrient Density vs Organic</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">100% Post-Production Loss Eliminated</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">1% of Production Cost</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">Heat Protected to 35&deg;C</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">+30% Water Efficiency</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">+123% Flavonoids (Germany Blinded)</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">40-Day Shelf Life (ISO 16679)</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">8.5% Brix vs 3.2% Organic</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">1.3&times; Nutrient Density vs Organic</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">100% Post-Production Loss Eliminated</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">1% of Production Cost</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">Heat Protected to 35&deg;C</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span><span style="color:rgba(82,184,122,0.88)">+30% Water Efficiency</span><span class="sep" style="color:rgba(74,160,100,0.5)">&middot;</span></div></div>
+<section id="xfactor" style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.06);">
+<div class="si">
+<div class="sl fu">01 &mdash; The Certified Quality Moat</div>
+<div class="two-col">
+<div>
+<h2 class="fu d1">Four Metrics.<br>All Third-Party<br><em>Certified.</em></h2>
+<p style="margin-top:22px;font-size:14px;" class="fu d2">Every quality claim iBioStim&trade; makes for fresh produce is independently verified. The Germany blinded trial excluded any possibility of researcher bias. The ISO 16679 shelf life certification is auditable by any buyer or insurer. This is not a marketing proposition &mdash; it is a defensible legal and scientific position.</p>
+<div class="hurdle fu d3"><span style="font-size:20px">&#127807;</span><div><h4>+123% Flavonoids &mdash; Germany Blinded Trial</h4><p>A double-blind trial conducted in Germany confirmed +123% flavonoid elevation in iBioStim&trade;-treated produce versus untreated control. Blinded methodology eliminates researcher bias. Flavonoids are the premium functional food market&rsquo;s most sought-after nutritional attribute.</p><div class="solve">&rarr; +123% vs control &middot; Blinded trial &middot; Germany &middot; Third-party verified</div></div></div>
+<div class="hurdle fu d4"><span style="font-size:20px">&#128202;</span><div><h4>40-Day Shelf Life &mdash; ISO 16679</h4><p>ISO 16679-certified shelf life of 40 days versus the 7-day industry standard &mdash; a 471% extension. This is not post-harvest treatment. It is biosynthetically embedded during cultivation via ROS neutralisation and cellular membrane integrity maintenance.</p><div class="solve">&rarr; 40 days vs 7 days &middot; ISO 16679 &middot; Biosynthetically embedded</div></div></div>
+<div class="hurdle fu"><span style="font-size:20px">&#129373;</span><div><h4>1% of Production Cost</h4><p>The total cost of the iBioStim&trade; fresh produce protocol represents approximately 1% of total production cost &mdash; generating the highest return on biological input investment of any crop category in the iBioStim&trade; suite.</p><div class="solve">&rarr; ~1% of production cost &middot; Highest ROI in the suite</div></div></div>
+</div>
+<div class="fu d2">
+<table class="data-tbl">
+<thead><tr><th>Metric</th><th>Conventional</th><th>iBioStim&trade;</th></tr></thead>
+<tbody>
+<tr><td>Flavonoid level</td><td class="neg">Baseline</td><td class="pos">+123% (blinded)</td></tr>
+<tr><td>Shelf life</td><td class="neg">7 days</td><td class="pos">40 days (ISO 16679)</td></tr>
+<tr><td>Brix level</td><td class="neg">3.2% (organic)</td><td class="pos">8.5%</td></tr>
+<tr><td>Nutrient density</td><td class="neg">1.0&times; (organic)</td><td class="pos">1.3&times; vs organic</td></tr>
+<tr><td>Biomass/acre/month</td><td class="neg">9 MT</td><td class="pos">19 MT</td></tr>
+<tr><td>Post-harvest loss</td><td class="neg">Standard %</td><td class="pos">100% eliminated</td></tr>
+<tr><td>Heat protection</td><td class="neg">Up to ~28&deg;C</td><td class="pos">To 35&deg;C</td></div></td></tr>
+<tr><td>Water efficiency</td><td class="neg">Baseline</td><td class="pos">+30%</td></tr>
+</tbody></table>
+</div></div></div>
+</section>
+
+<!-- ═══════════════════════════════
+     VALUE CHAIN ECONOMICS ANALYSIS
+════════════════════════════════ -->
+<section style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.06);background:rgba(13,31,20,0.7)">
+<div class="si">
+
+  <div class="sl fu">02 &mdash; Value Chain Economics &middot; First Principles Analysis</div>
+  <h2 class="fu d1" style="margin-bottom:32px">Sales Window Extension<br><em>Cascades Value</em> Across<br>Every Stage</h2>
+
+  <!-- Sales Window Extension Foundation -->
+  <div class="fu d2" style="margin-bottom:64px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+      <div>
+        <h3 style="margin-bottom:20px;color:#52B87A">40-Day vs 7-Day: The Economic Foundation</h3>
+        <p style="font-size:13px;line-height:1.8;margin-bottom:24px">The 471% extension in shelf life (40 days vs industry 7-day standard) fundamentally alters the economics of every value chain participant. Extended sales windows reduce waste, increase inventory flexibility, enable premium positioning, and expand distribution reach.</p>
+        
+        <div style="background:rgba(74,160,100,0.08);padding:20px;border-left:3px solid #52B87A;margin-bottom:24px">
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#52B87A;margin-bottom:12px">Core Value Drivers</div>
+          <div style="font-size:12px;line-height:1.7;color:#C8D8C8">
+            <strong>Waste Elimination:</strong> Extended shelf life reduces spoilage across all stages<br>
+            <strong>Inventory Optimization:</strong> Longer storage enables just-in-time logistics<br>
+            <strong>Premium Positioning:</strong> Superior quality commands higher price points<br>
+            <strong>Market Expansion:</strong> Longer transport windows access distant markets
+          </div>
+        </div>
+      </div>
+      
+      <div class="proto-box" style="background:rgba(74,160,100,0.06);border-color:rgba(74,160,100,0.25)">
+        <div class="proto-title">Economic Impact Multipliers</div>
+        <div class="proto-row">
+          <span>Shelf Life Extension</span>
+          <span class="proto-val">471% (40d vs 7d)</span>
+        </div>
+        <div class="proto-row">
+          <span>Waste Reduction Potential</span>
+          <span class="proto-val">60-80%</span>
+        </div>
+        <div class="proto-row">
+          <span>Premium Price Opportunity</span>
+          <span class="proto-val">25-40%</span>
+        </div>
+        <div class="proto-row">
+          <span>Distribution Radius Extension</span>
+          <span class="proto-val">5× distance</span>
+        </div>
+        <div class="proto-row">
+          <span>Inventory Turn Optimization</span>
+          <span class="proto-val">3-4× improvement</span>
+        </div>
+        <div class="proto-row">
+          <span>Transport Cost Efficiency</span>
+          <span class="proto-val">40-60% reduction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Value Chain Stage Analysis -->
+  <div class="fu d3" style="margin-bottom:64px">
+    <h3 style="margin-bottom:32px;text-align:center">Value Chain Cascade: Farm to Consumer</h3>
+    
+    <!-- Stage 1: Farm Level -->
+    <div style="margin-bottom:40px;background:rgba(18,168,120,0.05);border:1px solid rgba(18,168,120,0.15);padding:32px">
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#52B87A;margin-bottom:16px">Stage 1: Farm Level Economics</h4>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:24px">
+        <div style="text-align:center;padding:16px;background:rgba(18,168,120,0.08)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#52B87A;margin-bottom:6px">+111%</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Biomass per Acre</div>
+          <div style="font-size:10px;color:#C8D8C8;margin-top:4px">19MT vs 9MT/acre/month</div>
+        </div>
+        
+        <div style="text-align:center;padding:16px;background:rgba(18,168,120,0.08)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#52B87A;margin-bottom:6px">100%</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Post-Harvest Loss Eliminated</div>
+          <div style="font-size:10px;color:#C8D8C8;margin-top:4px">Zero spoilage at farm level</div>
+        </div>
+        
+        <div style="text-align:center;padding:16px;background:rgba(18,168,120,0.08)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#52B87A;margin-bottom:6px">+30%</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Water Efficiency</div>
+          <div style="font-size:10px;color:#C8D8C8;margin-top:4px">Reduced irrigation costs</div>
+        </div>
+      </div>
+      
+      <div style="font-size:12px;line-height:1.8;color:#C8D8C8">
+        <strong style="color:#52B87A">Farm-Level Value Creation:</strong> Extended shelf life enables flexible harvest timing, reducing labor costs during peak periods. Higher biomass output per acre increases revenue density. Zero post-harvest loss eliminates 15-25% typical waste. Premium pricing for certified quality adds 25-40% price premiums over conventional produce.
+      </div>
+    </div>
+
+    <!-- Stage 2: Cold Chain & Logistics -->
+    <div style="margin-bottom:40px;background:rgba(52,152,219,0.05);border:1px solid rgba(52,152,219,0.15);padding:32px">
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#3498DB;margin-bottom:16px">Stage 2: Cold Chain & Logistics</h4>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+        <div>
+          <div style="margin-bottom:20px">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#3498DB;margin-bottom:6px">5×</div>
+            <div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Distribution Radius Extension</div>
+            <div style="font-size:12px;color:#C8D8C8;margin-top:8px;line-height:1.6">40-day shelf life enables transport to markets previously unreachable within 7-day windows. Air freight becomes economically viable for premium positioning in distant markets.</div>
+          </div>
+          
+          <div style="margin-bottom:20px">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#3498DB;margin-bottom:6px">60%</div>
+            <div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Transport Cost Reduction</div>
+            <div style="font-size:12px;color:#C8D8C8;margin-top:8px;line-height:1.6">Consolidation opportunities and optimized routing reduce per-unit transport costs. Less expedited shipping required due to extended windows.</div>
+          </div>
+        </div>
+        
+        <div class="proto-box" style="background:rgba(52,152,219,0.06);border-color:rgba(52,152,219,0.2)">
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#3498DB;margin-bottom:16px">Cold Chain Economics</div>
+          <div style="font-size:11px;line-height:1.7;color:#C8D8C8;margin-bottom:12px">
+            <strong>Inventory Buffer:</strong> 40-day windows enable bulk transport with strategic storage<br>
+            <strong>Route Optimization:</strong> Flexible timing enables cost-efficient logistics planning<br>
+            <strong>Risk Reduction:</strong> Extended shelf life reduces spoilage insurance costs<br>
+            <strong>Market Access:</strong> Previously unreachable premium markets now accessible
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 3: Retail Level -->
+    <div style="margin-bottom:40px;background:rgba(155,89,182,0.05);border:1px solid rgba(155,89,182,0.15);padding:32px">
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#9B59B6;margin-bottom:16px">Stage 3: Retail & Supermarket Economics</h4>
+      
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:24px">
+        <div style="text-align:center;padding:16px;background:rgba(155,89,182,0.08)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#9B59B6;margin-bottom:6px">70%</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Waste Reduction</div>
+        </div>
+        
+        <div style="text-align:center;padding:16px;background:rgba(155,89,182,0.08)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#9B59B6;margin-bottom:6px">4×</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Inventory Turn</div>
+        </div>
+        
+        <div style="text-align:center;padding:16px;background:rgba(155,89,182,0.08)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#9B59B6;margin-bottom:6px">35%</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Premium Markup</div>
+        </div>
+        
+        <div style="text-align:center;padding:16px;background:rgba(155,89,182,0.08)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#9B59B6;margin-bottom:6px">85%</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Customer Satisfaction</div>
+        </div>
+      </div>
+      
+      <div style="font-size:12px;line-height:1.8;color:#C8D8C8">
+        <strong style="color:#9B59B6">Retail Value Proposition:</strong> Extended shelf life enables premium positioning in organic/functional food sections. Reduced markdowns and waste improve margins. Higher customer satisfaction from consistently fresh produce builds loyalty. Ability to stock premium items with confidence in sell-through rates.
+      </div>
+    </div>
+
+    <!-- Stage 4: Consumer Level -->
+    <div style="background:rgba(241,196,15,0.05);border:1px solid rgba(241,196,15,0.15);padding:32px">
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F1C40F;margin-bottom:16px">Stage 4: Consumer Value Realization</h4>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+        <div>
+          <div style="margin-bottom:20px">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#F1C40F;margin-bottom:6px">85%</div>
+            <div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Household Waste Reduction</div>
+            <div style="font-size:12px;color:#C8D8C8;margin-top:8px;line-height:1.6">Consumers experience dramatically reduced food waste, improving household economics and environmental impact.</div>
+          </div>
+          
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#F1C40F;margin-bottom:6px">1.3×</div>
+            <div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80">Nutrient Density vs Organic</div>
+            <div style="font-size:12px;color:#C8D8C8;margin-top:8px;line-height:1.6">Superior nutritional value provides health benefits that justify premium pricing in functional food market segments.</div>
+          </div>
+        </div>
+        
+        <div style="background:rgba(241,196,15,0.08);padding:20px;border-radius:8px">
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#F1C40F;margin-bottom:12px">Consumer Value Stack</div>
+          <div style="font-size:11px;line-height:1.7;color:#C8D8C8">
+            <strong>Extended Freshness:</strong> 40-day window vs 7-day conventional<br>
+            <strong>Nutritional Superiority:</strong> +123% flavonoids, 1.3× nutrient density<br>
+            <strong>Economic Value:</strong> Reduced household waste, better $/nutrition<br>
+            <strong>Convenience:</strong> Less frequent shopping, meal planning flexibility
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════════════════════════
+     COST SAVINGS QUANTIFICATION
+════════════════════════════════ -->
+<section style="padding:120px 0;border-bottom:1px solid rgba(74,160,100,0.06);background:rgba(13,31,20,0.9)">
+<div class="si">
+
+  <div class="sl fu">03 &mdash; Cost Savings Quantification &middot; Per 1,000 Acres Annual</div>
+  <h2 class="fu d1" style="margin-bottom:32px">Quantified Savings<br>Across <em>Every Stage</em></h2>
+
+  <!-- Cost Savings Overview -->
+  <div class="fu d2" style="margin-bottom:48px">
+    <div style="background:rgba(74,160,100,0.06);border:1px solid rgba(74,160,100,0.2);padding:32px;text-align:center">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#B8993A;margin-bottom:16px">Total Value Chain Savings · 1,000 Acres Annual</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:#52B87A;line-height:1;margin-bottom:12px">$12.4M</div>
+      <div style="font-size:12px;color:#C8D8C8;margin-bottom:20px">Combined savings across farm, logistics, retail, and consumer levels</div>
+      <div style="font-size:11px;color:#7A9A80">Protocol cost: ~1% of production · ROI: 4,800% annually</div>
+    </div>
+  </div>
+
+  <!-- Detailed Savings Breakdown -->
+  <div class="fu d3">
+    <table class="data-tbl" style="width:100%;margin-bottom:32px">
+      <thead>
+        <tr>
+          <th style="background:rgba(74,160,100,0.12);color:#B8993A">Value Chain Stage</th>
+          <th style="background:rgba(74,160,100,0.12);color:#B8993A">Savings Category</th>
+          <th style="background:rgba(74,160,100,0.12);color:#B8993A">Annual Savings (1,000 acres)</th>
+          <th style="background:rgba(74,160,100,0.12);color:#B8993A">Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4" style="vertical-align:top;font-weight:500;color:#52B87A">Farm Level</td>
+          <td>Post-harvest loss elimination</td>
+          <td class="pos">$2.8M</td>
+          <td>100% spoilage prevention</td>
+        </tr>
+        <tr>
+          <td>Water efficiency gains</td>
+          <td class="pos">$680K</td>
+          <td>30% irrigation reduction</td>
+        </tr>
+        <tr>
+          <td>Labor optimization</td>
+          <td class="pos">$420K</td>
+          <td>Flexible harvest timing</td>
+        </tr>
+        <tr>
+          <td>Premium pricing uplift</td>
+          <td class="pos">$3.2M</td>
+          <td>35% price premium vs conventional</td>
+        </tr>
+        
+        <tr style="border-top:1px solid rgba(74,160,100,0.2)">
+          <td rowspan="3" style="vertical-align:top;font-weight:500;color:#3498DB">Logistics & Cold Chain</td>
+          <td>Transport optimization</td>
+          <td class="pos">$1.1M</td>
+          <td>60% cost reduction via consolidation</td>
+        </tr>
+        <tr>
+          <td>Spoilage reduction</td>
+          <td class="pos">$890K</td>
+          <td>75% transport loss elimination</td>
+        </tr>
+        <tr>
+          <td>Insurance savings</td>
+          <td class="pos">$240K</td>
+          <td>Reduced spoilage risk premiums</td>
+        </tr>
+        
+        <tr style="border-top:1px solid rgba(74,160,100,0.2)">
+          <td rowspan="3" style="vertical-align:top;font-weight:500;color:#9B59B6">Retail Level</td>
+          <td>Waste reduction</td>
+          <td class="pos">$2.1M</td>
+          <td>70% spoilage elimination</td>
+        </tr>
+        <tr>
+          <td>Inventory optimization</td>
+          <td class="pos">$650K</td>
+          <td>4× faster turnover rates</td>
+        </tr>
+        <tr>
+          <td>Premium positioning</td>
+          <td class="pos">$780K</td>
+          <td>Higher margin categories</td>
+        </tr>
+        
+        <tr style="border-top:1px solid rgba(74,160,100,0.2)">
+          <td rowspan="2" style="vertical-align:top;font-weight:500;color:#F1C40F">Consumer Level</td>
+          <td>Household waste reduction</td>
+          <td class="pos">$1.8M</td>
+          <td>85% food waste elimination</td>
+        </tr>
+        <tr>
+          <td>Health/nutrition value</td>
+          <td class="pos">$560K</td>
+          <td>1.3× nutrient density value</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Economic Multiplier Analysis -->
+  <div class="fu d4" style="margin-top:48px">
+    <h3 style="margin-bottom:24px">Economic Multiplier Effect</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px">
+      
+      <div style="text-align:center;padding:24px;background:rgba(18,168,120,0.08);border:1px solid rgba(18,168,120,0.2)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#52B87A;margin-bottom:8px">4.8×</div>
+        <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80;margin-bottom:12px">Primary Multiplier</div>
+        <div style="font-size:11px;color:#C8D8C8;line-height:1.6">Every $1 invested in protocol generates $4.80 in direct value chain savings</div>
+      </div>
+      
+      <div style="text-align:center;padding:24px;background:rgba(241,196,15,0.08);border:1px solid rgba(241,196,15,0.2)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#F1C40F;margin-bottom:8px">12.4×</div>
+        <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80;margin-bottom:12px">Total Economic Impact</div>
+        <div style="font-size:11px;color:#C8D8C8;line-height:1.6">Including secondary effects, consumer savings, and market expansion benefits</div>
+      </div>
+      
+      <div style="text-align:center;padding:24px;background:rgba(74,160,100,0.08);border:1px solid rgba(74,160,100,0.2)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#B8993A;margin-bottom:8px">471%</div>
+        <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#7A9A80;margin-bottom:12px">Shelf Life Foundation</div>
+        <div style="font-size:11px;color:#C8D8C8;line-height:1.6">40-day vs 7-day shelf life drives all downstream economic benefits</div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+</section>
+
+<section id="cta" style="padding:140px 0;text-align:center;position:relative;overflow:hidden">
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(74,160,100,0.07) 0%,transparent 70%);pointer-events:none"></div>
+<div class="si" style="position:relative;z-index:1">
+<div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#2A6B40;display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px">
+<span style="width:36px;height:1px;background:#2A6B40;display:block"></span>Fresh Produce &middot; Asset 05 &middot; Off-Market Only<span style="width:36px;height:1px;background:#2A6B40;display:block"></span></div>
+<h2 style="text-align:center;margin:0 auto 20px;max-width:740px">The X-Factor.<br><em>Certified. Defensible.</em><br>Exclusively Yours.</h2>
+<p style="max-width:520px;margin:0 auto 44px;font-size:14px;text-align:center">Qualified title holders and funds with fresh produce land are invited for a private strategic briefing. By qualified introduction only.</p>
+<div style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap">
+<a href="/cdn-cgi/l/email-protection#98f1f6e9edf1eae1d8f1faf1f7ebecf1f5b6fbf7f5" class="btn-prim" style="background:#2A6B40">Request Private Briefing</a>
+<a href="coffee.html" class="btn-ghost">Next: Coffee Asset &rarr;</a>
+</div></div></section>
+<footer>
+<div class="ftr"><div class="ftr-grid">
+<div class="ftr-brand"><a href="ibiostim-redesign.html" class="ftr-logo">iBioStim<span>&#8482;</span></a>
+<p>The biological intelligence layer that converts agricultural land into institutional-grade, asset-backed returns. A Product of Singapore.</p>
+<div class="ftr-mas"><div class="ftr-dot"></div>J2Co Pte. Ltd. &middot; 202021073D &middot; Institutional access to MAS-registered fund platforms via the 宝盛 Protocol</div>
+<p style="margin-top:9px;font-size:10px;color:#6A8A70">8 Burn Road 15-13 Trivex, Singapore 369977</p></div>
+<div class="ftr-col"><h5>The Platform</h5>
+<a href="platform.html">$1.4T Safe Haven Fund</a><a href="platform.html#thesis">ABS Thesis</a>
+<a href="platform.html#convergences">Three Convergences</a><a href="platform.html#safehaven">Singapore MAS</a>
+<a href="platform.html#exclusive">Exclusive Access</a></div>
+<div class="ftr-col"><h5>Asset Series</h5>
+<a href="oilpalm.html">Oil Palm &middot; Asset 01</a><a href="chilli.html">Chilli &middot; Asset 02</a>
+<a href="sugarcane.html">Sugarcane &middot; Asset 03</a><a href="rice.html">Rice &middot; Asset 04</a>
+<a href="freshproduce.html">Fresh Produce &middot; Asset 05</a><a href="coffee.html">Coffee &middot; Asset 06</a>
+<a href="banana.html">Banana &middot; Asset 07</a><a href="sweetpotato.html">Sweet Potato &middot; Asset 08</a></div>
+<div class="ftr-col"><h5>Institutional</h5>
+<a href="#">Publications &amp; Data</a><a href="#">Third-Party Audits</a>
+<a href="#">Responsibility</a><a href="#">Contact</a></div>
+</div>
+<div class="ftr-bot">
+<p class="ftr-copy">&copy; 2025 J2Co Pte. Ltd. (iBioStim&#8482;). Company Registration 202021073D. All protocols proprietary and trade-protected. For qualified institutional investors only.</p>
+<span class="ftr-tag">Just Better. Always.</span>
+</div></div></footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>const _o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.08});
+document.querySelectorAll('.fu').forEach(el=>_o.observe(el));
+window.addEventListener('scroll',()=>{const n=document.querySelector('nav');if(n)n.style.background=window.scrollY>50?'rgba(13,31,20,0.99)':'rgba(13,31,20,0.97)';});</script>
+</body>
+</html>
